@@ -1,0 +1,50 @@
+# Header menu and footer link groups.
+#
+# The header deliberately does not link to the service pages. The only route into them from
+# the body of the site is the appliance grid on the home page, plus the footer column below.
+
+main:
+  - label: Service Areas
+    href: /locations/
+
+footerGroups:
+  - heading: Appliances We Repair
+    links:
+      - label: Refrigerator Repair
+        href: /services/refrigerator-repair/
+      - label: Freezer Repair
+        href: /services/freezer-repair/
+      - label: Washing Machine Repair
+        href: /services/washer-repair/
+      - label: Dryer Repair
+        href: /services/dryer-repair/
+      - label: Dishwasher Repair
+        href: /services/dishwasher-repair/
+      - label: Oven, Stove & Range Repair
+        href: /services/oven-stove-range-repair/
+      - label: Microwave Repair
+        href: /services/microwave-repair/
+      - label: Wine Cooler Repair
+        href: /services/wine-cooler-repair/
+
+  - heading: Service Areas
+    links:
+      - label: Tampa, FL
+        href: /locations/tampa/
+      - label: Fort Lauderdale, FL
+        href: /locations/fort-lauderdale/
+      - label: Stamford, CT
+        href: /locations/stamford/
+      - label: New Haven, CT
+        href: /locations/new-haven/
+      - label: All service areas
+        href: /locations/
+
+  - heading: About This Site
+    links:
+      - label: Site Map
+        href: /sitemap/
+      - label: Privacy Policy
+        href: /privacy-policy/
+      - label: Terms of Service
+        href: /terms-of-service/

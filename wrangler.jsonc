@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "fix-it-easy",
+  "compatibility_date": "2026-08-01",
+
+  // Static assets only. There is no "main" entry, so no Worker code runs and no request
+  // is billed as a Worker invocation — the site is served straight from Cloudflare's edge.
+  //
+  // Response headers (including the noindex used on preview builds) come from dist/_headers,
+  // which scripts/emit-deploy-files.mjs writes at the end of the build.
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}

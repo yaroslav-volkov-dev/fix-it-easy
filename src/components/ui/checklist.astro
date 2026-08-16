@@ -1,0 +1,49 @@
+---
+/**
+ * A list of short promises, each with a tick. The tick is decorative: the list semantics
+ * already tell a screen reader how many items there are and where each one starts.
+ */
+type Props = {
+  items: string[];
+  tone?: 'onLight' | 'onDark';
+  class?: string;
+};
+
+const { items, tone = 'onLight', class: className = '' } = Astro.props;
+
+const textColor = tone === 'onDark' ? 'text-white' : 'text-navy-900';
+/**
+ * The tick is white inside a solid red disc rather than a bare red stroke. On a dark band a
+ * bare tick had to be lightened to clear 4.5:1, which put the same salmon tint on the page
+ * that the logo was corrected for; inside a disc the tick is white on red-600 at 5.4:1 and
+ * the disc is a shape, so the brand red survives. The hairline gives the disc a boundary
+ * that clears 3:1 against navy, which the red alone does not.
+ */
+const markRing = tone === 'onDark' ? 'ring-1 ring-white/30' : '';
+---
+
+<ul class={`grid gap-3.5 ${className}`}>
+  {
+    items.map((item) => (
+      <li class={`flex items-start gap-3 text-lead font-semibold ${textColor}`}>
+        <span
+          class={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-600 ${markRing}`}
+        >
+          <svg
+            class="h-3.5 w-3.5 text-white"
+            viewBox="0 0 20 20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="m3.5 10.5 4 4 9-9" />
+          </svg>
+        </span>
+        <span>{item}</span>
+      </li>
+    ))
+  }
+</ul>

@@ -1,0 +1,75 @@
+---
+import ApplianceGrid from '@/components/sections/appliance-grid.astro';
+import CtaBand from '@/components/sections/cta-band.astro';
+import Differentiation from '@/components/sections/differentiation.astro';
+import Hero from '@/components/sections/hero.astro';
+import HowItWorks from '@/components/sections/how-it-works.astro';
+import PreEstimate from '@/components/sections/pre-estimate.astro';
+import ServiceAreas from '@/components/sections/service-areas.astro';
+import BaseLayout from '@/layouts/base-layout.astro';
+import { toE164 } from '@/lib/phone';
+import { buildGraph, buildOrganization } from '@/lib/schema';
+import { absoluteUrl } from '@/lib/seo';
+import { cityRefs, loadCities, loadHomeCopy, loadSiteCopy } from '@/lib/site';
+
+const { brand } = await loadSiteCopy();
+const home = await loadHomeCopy();
+const cities = await loadCities();
+
+const siteUrl = absoluteUrl(Astro.site, '/');
+const jsonLd = buildGraph([
+  buildOrganization({
+    siteUrl,
+    name: brand.name,
+    logoUrl: absoluteUrl(Astro.site, '/logo.png'),
+    telephone: toE164(brand.phone),
+    cities: cityRefs(cities),
+  }),
+]);
+---
+
+<BaseLayout title={home.hero.metaTitle} description={home.hero.metaDescription} jsonLd={jsonLd}>
+  <Hero
+    headline={home.hero.headline}
+    benefits={home.hero.benefits}
+    ctaLabel={home.hero.cta.label}
+    ctaNote={home.hero.cta.note}
+    phone={brand.phone}
+  />
+
+  <PreEstimate
+    heading={home.preEstimate.heading}
+    promises={home.preEstimate.promises}
+    ctaLabel={home.preEstimate.cta.label}
+    ctaNote={home.preEstimate.cta.note}
+    phone={brand.phone}
+  />
+
+  <HowItWorks heading={home.howItWorks.heading} steps={home.howItWorks.steps} />
+
+  <Differentiation
+    brand={brand}
+    heading={home.differentiation.heading}
+    body={home.differentiation.body}
+  />
+
+  <CtaBand
+    heading={home.ctaBand.heading}
+    body={home.ctaBand.body}
+    ctaLabel={home.ctaBand.cta.label}
+    phone={brand.phone}
+  />
+
+  <ApplianceGrid
+    heading={home.appliances.heading}
+    intro={home.appliances.intro}
+    cards={home.appliances.cards}
+  />
+
+  <ServiceAreas
+    heading={home.serviceAreas.heading}
+    intro={home.serviceAreas.intro}
+    allLocationsLabel={home.serviceAreas.allLocationsLabel}
+    cities={cities}
+  />
+</BaseLayout>

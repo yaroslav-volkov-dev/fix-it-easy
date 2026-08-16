@@ -1,0 +1,126 @@
+---
+import CtaBand from '@/components/sections/cta-band.astro';
+import FaqSection from '@/components/sections/faq-section.astro';
+import TitledCards from '@/components/sections/titled-cards.astro';
+import ApplianceIllustration from '@/components/ui/appliance-illustration.astro';
+import Band from '@/components/ui/band.astro';
+import Breadcrumbs from '@/components/ui/breadcrumbs.astro';
+import CallButton from '@/components/ui/call-button.astro';
+import BaseLayout from '@/layouts/base-layout.astro';
+import { interpolate } from '@/lib/interpolate';
+import { toE164 } from '@/lib/phone';
+import {
+  buildBreadcrumbs,
+  buildFaqPage,
+  buildGraph,
+  buildOrganization,
+  buildService,
+} from '@/lib/schema';
+import { absoluteUrl, canonicalUrl } from '@/lib/seo';
+import { cityRefs, loadCities, loadHomeCopy, loadServices, loadSiteCopy } from '@/lib/site';
+
+export const getStaticPaths = async () => {
+  const services = await loadServices();
+  return services.map((service) => ({ params: { slug: service.id }, props: { service } }));
+};
+
+const { service } = Astro.props;
+const { brand } = await loadSiteCopy();
+const home = await loadHomeCopy();
+const cities = await loadCities();
+
+const canonical = canonicalUrl(Astro.site, Astro.url.pathname);
+const siteUrl = absoluteUrl(Astro.site, '/');
+
+/**
+ * There is no services index page, so the trail is two levels: home, then this service.
+ * A service page deliberately links to no city page — the city-by-service link mesh is out
+ * of scope, and the footer already carries both lists on every page.
+ */
+const crumbs = [
+  { label: brand.breadcrumbHomeLabel, href: '/' },
+  { label: service.data.name },
+];
+
+const jsonLd = buildGraph([
+  buildOrganization({
+    siteUrl,
+    name: brand.name,
+    logoUrl: absoluteUrl(Astro.site, '/logo.png'),
+    telephone: toE164(brand.phone),
+    cities: cityRefs(cities),
+  }),
+  buildService({
+    siteUrl,
+    name: service.data.name,
+    serviceType: service.data.name,
+    description: service.data.metaDescription,
+    url: canonical,
+    cities: cityRefs(cities),
+  }),
+  buildFaqPage(service.data.faq),
+  buildBreadcrumbs([
+    { name: brand.breadcrumbHomeLabel, url: absoluteUrl(Astro.site, '/') },
+    { name: service.data.name, url: canonical },
+  ]),
+]);
+---
+
+<BaseLayout
+  title={service.data.metaTitle}
+  description={service.data.metaDescription}
+  jsonLd={jsonLd}
+>
+  <Breadcrumbs items={crumbs} ariaLabel={brand.breadcrumbAriaLabel} />
+
+  <section class="band-dark surface-hero py-band text-grey-200">
+    <div class="container-page">
+      <span
+        class="inline-flex h-20 w-20 items-center justify-center rounded-card bg-white text-navy-900"
+      >
+        <ApplianceIllustration icon={service.data.icon} class="h-14 w-14" />
+      </span>
+      <h1 class="measure mt-6 text-hero font-black text-white">{service.data.name}</h1>
+      <p class="measure mt-6 text-lead">{service.data.intro}</p>
+      <div class="mt-9">
+        <CallButton phone={brand.phone} label={home.hero.cta.label} variant="onDark" size="lg" />
+      </div>
+    </div>
+  </section>
+
+  <TitledCards
+    heading={brand.serviceProblemsHeading}
+    headingId="common-problems-heading"
+    cards={service.data.commonProblems}
+  />
+
+  <TitledCards
+    heading={brand.serviceWhenToCallHeading}
+    headingId="when-to-call-heading"
+    cards={service.data.whenToCall}
+    tone="muted"
+  />
+
+  <Band tone="light" labelledby="repair-or-replace-heading">
+    <h2 id="repair-or-replace-heading" class="text-h2 font-black text-navy-900">
+      {brand.serviceRepairOrReplaceHeading}
+    </h2>
+    <!-- Same rule-on-top treatment as the two sections above it: this is one more entry. -->
+    <p class="measure mt-heading-gap border-t-2 border-navy-900 pt-4 text-lead">
+      {service.data.repairOrReplace}
+    </p>
+  </Band>
+
+  <FaqSection
+    heading={interpolate(brand.serviceFaqHeadingTemplate, { service: service.data.name })}
+    items={service.data.faq}
+    tone="muted"
+  />
+
+  <CtaBand
+    heading={home.ctaBand.heading}
+    body={home.ctaBand.body}
+    ctaLabel={home.ctaBand.cta.label}
+    phone={brand.phone}
+  />
+</BaseLayout>

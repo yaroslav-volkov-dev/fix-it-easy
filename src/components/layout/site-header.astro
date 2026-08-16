@@ -1,0 +1,67 @@
+---
+/**
+ * With only two top-level destinations, a disclosure menu would be pure overhead. The
+ * links simply wrap onto a second row on narrow screens, which keeps the header at zero
+ * JavaScript and leaves nothing for the visitor to open before they can navigate.
+ */
+import BrandMark from '@/components/layout/brand-mark.astro';
+import PhoneLink from '@/components/ui/phone-link.astro';
+import type { SiteCopy } from '@/lib/site';
+
+type Props = {
+  brand: SiteCopy['brand'];
+  navigation: SiteCopy['navigation'];
+};
+
+const { brand, navigation } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<!--
+  Sticky from the medium breakpoint up, where the phone number is the only way to call. On
+  a phone the fixed call bar already sits at the bottom of every screen, so a second pinned
+  element would take a strip of a small viewport to repeat what is already there.
+-->
+<header class="border-b border-grey-200 bg-white md:sticky md:top-0 md:z-30">
+  <div class="container-page flex flex-wrap items-center gap-x-6 gap-y-1 py-3 sm:gap-x-8">
+    <a href="/" class="order-1 shrink-0 rounded-sm py-1">
+      <BrandMark brand={brand} />
+    </a>
+
+    <!--
+      The nav sits beside the logo rather than being pushed to the middle of the bar, and
+      mr-auto only kicks in from sm up, where there is a third item to push away.
+    -->
+    <nav aria-label={brand.menuAriaLabel} class="order-2 sm:mr-auto">
+      <ul class="flex flex-wrap gap-x-5 gap-y-1 sm:gap-x-7">
+        {
+          navigation.main.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                aria-current={currentPath.startsWith(link.href) ? 'page' : undefined}
+                class="inline-block py-1 text-small font-semibold text-navy-900 underline-offset-4 hover:text-red-600 hover:underline sm:text-base aria-[current]:text-red-600"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <!--
+      Hidden on phones, where it was forcing the bar onto a third row: the logo and the
+      number together are wider than 375px, so each took a line of its own and the menu took
+      a third. The fixed call bar carries the number on exactly those screens, so nothing is
+      lost — and the header comes back from 145px tall to one row.
+
+      The hiding lives on a wrapper because PhoneLink sets `inline-flex` in its own base
+      class, and Tailwind emits `.hidden` before `.inline-flex`, so a `hidden` passed in from
+      outside loses to the component's own display utility and the element stays visible.
+    -->
+    <span class="order-3 ml-auto hidden sm:block">
+      <PhoneLink phone={brand.phone} class="text-lg" />
+    </span>
+  </div>
+</header>

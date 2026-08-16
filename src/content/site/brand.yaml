@@ -1,0 +1,40 @@
+# Brand identity and every reusable label on the site.
+# Templates use {city}, {state}, {service} and {phone} — those are replaced automatically.
+# Do not remove the curly-brace placeholders, or the build will stop.
+
+name: FIX IT EASY
+tagline: Appliance Repair — Same-Day Service
+logoAlt: FIX IT EASY — appliance repair, same day service
+htmlLang: en
+
+# The logo sets "FIX IT" in navy and "EASY" in red, with a line under it.
+wordmark:
+  lead: FIX IT
+  accent: EASY
+  sub: APPLIANCE REPAIR
+  ribbon: SAME DAY SERVICE
+
+# The only phone number on the site. Change it here and it changes everywhere.
+# PLACEHOLDER — a production build refuses to run until this is the real number.
+phone: "+1 (000) 000-0000"
+
+skipLinkLabel: Skip to main content
+menuLabel: Menu
+menuAriaLabel: Main navigation
+breadcrumbHomeLabel: Home
+breadcrumbAriaLabel: Breadcrumb
+
+callBarLabel: Call Now
+callBarNote: Same-day service
+
+cityHeroTitleTemplate: Appliance Repair in {city}, {state}
+cityConditionsHeadingTemplate: Why homeowners in {city} call us
+cityAreasHeadingTemplate: Areas we serve in {city}
+cityNeighborhoodsLabel: Neighborhoods we cover
+cityNearbyLabel: Nearby cities we also serve
+cityFaqHeadingTemplate: FAQ about appliance repair in {city}
+
+serviceProblemsHeading: Common problems we fix
+serviceWhenToCallHeading: When to call instead of trying it yourself
+serviceRepairOrReplaceHeading: Repair or replace?
+serviceFaqHeadingTemplate: FAQ about {service}

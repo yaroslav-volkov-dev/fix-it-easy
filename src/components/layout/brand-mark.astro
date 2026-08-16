@@ -1,0 +1,80 @@
+---
+/**
+ * The FIX IT EASY lockup: the circular house-and-wrench badge from the client's logo,
+ * plus the wordmark as real text so it stays selectable, scalable and readable to a
+ * screen reader. Every string comes from src/content/site/brand.yaml.
+ *
+ * If the client supplies the original vector logo, only the <svg> below is replaced.
+ */
+import type { SiteCopy } from '@/lib/site';
+
+type Props = {
+  brand: SiteCopy['brand'];
+  size?: 'compact' | 'large';
+};
+
+const { brand, size = 'compact' } = Astro.props;
+
+const badgeSize = size === 'large' ? 'h-16 w-16' : 'h-11 w-11';
+const leadSize = size === 'large' ? 'text-3xl' : 'text-xl';
+const subSize = size === 'large' ? 'text-[0.7rem]' : 'text-[0.5rem]';
+
+/**
+ * Brand colours only — see brand-badge.astro for why there is no dark-surface variant.
+ * The mark belongs on a light ground; the header is the light strip above every page.
+ * The wrench is knocked out of the roundel, so it takes the colour of that ground.
+ */
+const accentFill = 'var(--color-red-600)';
+const wrenchFill = '#ffffff';
+---
+
+<span class="flex items-center gap-2.5">
+  <svg
+    class={`${badgeSize} shrink-0 text-navy-900`}
+    viewBox="0 0 100 100"
+    role="img"
+    aria-label={brand.logoAlt}
+  >
+    <!--
+      The compact cut keeps everything the full badge is recognised by except the wordmark
+      and the banner: ring, roof, chimney, window and the wrench roundel.
+      Proportions differ from the full badge on purpose. There the roundel sits below three
+      lines of type, so it can be small; here the type is gone, so the roof is raised and the
+      roundel enlarged until the wrench still reads at the 44 pixels the header uses.
+    -->
+    <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="6"></circle>
+    <rect x="64" y="19" width="6" height="13" fill={accentFill}></rect>
+    <path d="M17 48 L50 16 L83 48 L74.5 48 L50 26 L25.5 48 Z" fill="currentColor"></path>
+    <g fill="currentColor">
+      <rect x="43" y="32" width="6" height="6"></rect>
+      <rect x="51" y="32" width="6" height="6"></rect>
+      <rect x="43" y="40" width="6" height="6"></rect>
+      <rect x="51" y="40" width="6" height="6"></rect>
+    </g>
+
+    <circle cx="50" cy="71" r="16" fill="currentColor"></circle>
+    <!--
+      Open-end wrench, upright. Two things make it read as a wrench rather than a lollipop:
+      the head is a little over twice the width of the handle, not three times it, and the
+      handle is clearly the longer of the two. The jaw is a wedge knocked out of the top of
+      the ring in the roundel's own colour — a stroke with a gap in it disappears at this size.
+    -->
+    <g transform="translate(50 71)">
+      <circle cx="0" cy="-7.25" r="5.25" fill={wrenchFill}></circle>
+      <circle cx="0" cy="-7.25" r="2.4" fill="currentColor"></circle>
+      <rect x="-2.4" y="-13" width="4.8" height="5.75" fill="currentColor"></rect>
+      <rect x="-2.4" y="-3.9" width="4.8" height="16.4" rx="2.4" fill={wrenchFill}></rect>
+    </g>
+  </svg>
+
+  <span class="leading-none">
+    <span class={`block font-black tracking-tight whitespace-nowrap text-navy-900 ${leadSize}`}>
+      <span class="inline-block -skew-x-6">
+        {brand.wordmark.lead}{' '}<span class="text-red-600">{brand.wordmark.accent}</span>
+      </span>
+    </span>
+    <span class={`mt-1 block font-semibold uppercase tracking-[0.2em] text-navy-700 ${subSize}`}>
+      {brand.wordmark.sub}
+    </span>
+  </span>
+</span>

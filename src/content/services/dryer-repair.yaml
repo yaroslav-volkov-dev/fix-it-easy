@@ -1,0 +1,119 @@
+name: Dryer Repair
+shortName: Dryer
+order: 3
+icon: dryer
+
+metaTitle: Dryer Repair — Same-Day Service | FIX IT EASY
+metaDescription: >-
+  Dryer not heating, taking three cycles or shutting off early? Same-day repair in Florida and
+  Connecticut with the price fixed before work starts.
+
+intro: >-
+  Almost every dryer call comes down to one of two things — heat or airflow — and from inside
+  the laundry room they look identical. A machine that tumbles but dries nothing has usually
+  lost a heating element, a thermal fuse or an igniter. A machine that dries eventually, over
+  two or three cycles, has a restricted vent. That distinction matters more here than almost
+  anywhere: Florida air arrives at the drum already carrying moisture, so the vent run stays
+  damp, lint sticks to it, and airflow falls month after month without anyone noticing.
+  Connecticut adds the other half of the problem — three-family houses where the laundry sits
+  in a shared basement at the end of a long duct that was added decades after the house was
+  built. A restricted vent is also why thermal fuses keep blowing and why dryer fires start,
+  so we check the vent on every heat call whether or not that is what you rang about.
+
+commonProblems:
+  - title: Tumbles but never gets hot
+    body: >-
+      On an electric machine this is a heating element, a thermal fuse or a thermal cut-off
+      that has opened; on gas it is usually the igniter or the flame sensor. The parts
+      themselves are inexpensive. What matters is finding why the fuse opened, because one
+      that blew from a blocked vent will blow again within weeks unless the vent is cleared at
+      the same visit.
+
+  - title: Clothes still damp after a full cycle
+    body: >-
+      Airflow, not heat. Lint accumulates along the duct run, behind the drum and inside the
+      blower housing, and a long or crushed flexible hose makes it far worse. A dryer that
+      cannot exhaust cannot dry however hot the element gets, so the airflow is measured
+      rather than assumed clear because the wall outlet looks clear.
+
+  - title: Loud thumping or squealing as the drum turns
+    body: >-
+      Worn drum rollers, a failing idler pulley or a stretched belt. None of it is urgent on
+      the day it starts, but a roller that seizes flat-spots and eventually scores the drum,
+      turning a modest repair into an expensive one. Of everything on this page, it is the
+      fault most worth catching early.
+
+  - title: Shuts off partway through and restarts once cool
+    body: >-
+      The machine is overheating and protecting itself, which points straight back at
+      restricted airflow. If it stops and will not restart at all, the likelier causes are the
+      door switch, the motor's centrifugal switch or the control board.
+
+  - title: Damp, musty smell in the laundry room while it runs
+    body: >-
+      Exhaust is leaking back into the room, usually from a disconnected joint behind the
+      machine or a duct that has pulled away inside a wall cavity. In a humid climate that
+      moisture ends up in the drywall, so it is worth tracing rather than living with.
+
+  - title: Long shared duct runs in older multi-family housing
+    body: >-
+      Where several units feed a single basement run, the duct is nobody's responsibility and
+      gets cleaned by nobody. Cycles lengthen for every apartment on the run at once, and the
+      first machine to blow a fuse gets blamed for a problem it did not cause.
+
+whenToCall:
+  - title: Any smell of scorching or hot lint
+    body: >-
+      Stop using the machine immediately. A hot or burnt smell means lint is collecting
+      somewhere it is being heated, which is the beginning of the most common cause of
+      laundry-room fires. This is the one appliance fault we treat as urgent regardless of
+      what else is on the schedule.
+
+  - title: Anything on the gas side of a gas dryer
+    body: >-
+      Gas valves, igniters and supply connections are not a place for trial and error. A
+      leaking connection is odourless to a tired nose long before it is dangerous, and the
+      joint has to be pressure-checked after any work, not simply tightened and hoped over.
+
+  - title: A 240-volt electric dryer that trips its breaker
+    body: >-
+      Electric dryers run on a 240-volt circuit, and a trip means either a fault inside the
+      machine or a failing connection at the terminal block or the outlet. Both carry enough
+      current to start a fire behind the wall, and neither is diagnosed by resetting.
+
+repairOrReplace: >-
+  Dryers are mechanically simple and stay economic to repair for a long time. Elements, fuses,
+  igniters, belts, rollers, pulleys and door switches are all inexpensive, and a machine of
+  eight or ten years with any of those faults is worth fixing without hesitation. The
+  calculation changes with a failed motor or a cracked drum on a unit past twelve years, where
+  parts and labour together approach half the cost of a replacement. One caveat specific to
+  this appliance: if the vent run itself is the problem, a new dryer will disappoint you in
+  exactly the same way as the old one. Fix the duct first, whichever machine ends up attached
+  to it.
+
+faq:
+  - question: How often does a dryer vent actually need cleaning?
+    answer: >-
+      Once a year for a typical household, and more often for a long duct run, several loads a
+      day, or a home with pets. In humid coastal air the interval is shorter, because damp
+      lint packs down harder than dry lint. If the machine has started taking noticeably
+      longer than it used to, the vent is the first place to look.
+
+  - question: Is a gas dryer harder to repair than an electric one?
+    answer: >-
+      Not harder, but the failure list is different — igniters, gas valve coils and flame
+      sensors instead of heating elements. Our technicians carry parts for both. Gas work also
+      means the connection is verified before we leave, which is not optional.
+
+  - question: Can you work on a stacked or closet-installed dryer?
+    answer: >-
+      Yes. Stacked pairs and closet installations take longer because the dryer has to be
+      brought out and often unstacked to reach the blower and the vent connection, and that
+      time is included in the fixed price you approve before we start.
+
+  - question: We share a basement laundry with other units. Will you still come out?
+    answer: >-
+      Yes, and it is a large share of what we do in older multi-family housing. The point
+      worth knowing is that a shared vent run is almost always the underlying cause when a
+      dryer stops drying well, so we clear it as part of the visit rather than replacing a
+      fuse that will fail again next month.

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!--
+    The tab icon is the header mark unchanged — same roof, chimney, window, roundel and
+    wrench, at the same proportions — with two adjustments that only concern a 16-pixel tab:
+
+      - a white disc behind it, because a navy ring on transparent all but disappears
+        against a dark tab strip;
+      - a thicker ring, because a 6-unit stroke lands on well under one pixel at that size.
+
+    Nothing is dropped and nothing is enlarged. Checked by rasterising at 16, 32 and 48 and
+    looking at the actual pixel grid.
+  -->
+  <circle cx="50" cy="50" r="50" fill="#ffffff" />
+  <circle cx="50" cy="50" r="45.5" fill="none" stroke="#1c2c4c" stroke-width="9" />
+
+  <rect x="64" y="19" width="6" height="13" fill="#d0202b" />
+  <path d="M17 48 L50 16 L83 48 L74.5 48 L50 26 L25.5 48 Z" fill="#1c2c4c" />
+  <g fill="#1c2c4c">
+    <rect x="43" y="32" width="6" height="6" />
+    <rect x="51" y="32" width="6" height="6" />
+    <rect x="43" y="40" width="6" height="6" />
+    <rect x="51" y="40" width="6" height="6" />
+  </g>
+
+  <circle cx="50" cy="71" r="16" fill="#1c2c4c" />
+  <g transform="translate(50 71)">
+    <circle cx="0" cy="-7.25" r="5.25" fill="#ffffff" />
+    <circle cx="0" cy="-7.25" r="2.4" fill="#1c2c4c" />
+    <rect x="-2.4" y="-13" width="4.8" height="5.75" fill="#1c2c4c" />
+    <rect x="-2.4" y="-3.9" width="4.8" height="16.4" rx="2.4" fill="#ffffff" />
+  </g>
+</svg>

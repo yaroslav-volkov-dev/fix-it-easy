@@ -1,0 +1,64 @@
+---
+/**
+ * The only conversion element on the site. Every variant resolves to a tel: link.
+ *
+ * The phone number is rendered as visually hidden text inside the link rather than as an
+ * aria-label. That way the accessible name both contains the visible label (WCAG 2.5.3,
+ * Label in Name) and includes the number itself (§11 of the brief) — an aria-label would
+ * replace the visible words and break the first requirement.
+ */
+import { toTelHref } from '@/lib/phone';
+
+type Props = {
+  phone: string;
+  label: string;
+  variant?: 'primary' | 'onDark' | 'outline';
+  size?: 'md' | 'lg';
+  class?: string;
+};
+
+const { phone, label, variant = 'primary', size = 'md', class: className = '' } = Astro.props;
+
+// No shadow and no lift. A glow under the primary button is the same soft-edged decoration as
+// a gradient wash; a saturated red rectangle at this size does not need help being found.
+const base =
+  'inline-flex min-h-12 items-center justify-center gap-2.5 rounded-control font-bold ' +
+  'transition-colors duration-150';
+
+const sizes = {
+  md: 'px-6 py-3 text-base',
+  lg: 'px-8 py-4 text-lg',
+} as const;
+
+const variants = {
+  primary: 'bg-red-600 text-white hover:bg-red-700',
+  // On a navy band the red fill sits at 2.59:1 against the surface, below the 3:1 that
+  // SC 1.4.11 asks of a control boundary, so the button carries its own light hairline.
+  // A shadow is pointless there: nothing shows against navy.
+  onDark: 'bg-red-600 text-white ring-1 ring-white/35 hover:bg-red-700',
+  outline: 'bg-white text-navy-900 ring-2 ring-navy-900 hover:bg-grey-100',
+} as const;
+---
+
+<a
+  href={toTelHref(phone)}
+  class={`${base} ${sizes[size]} ${variants[variant]} ${className}`}
+  data-call-cta
+>
+  <svg
+    class="h-5 w-5 shrink-0"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2.2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <path
+      d="M6.5 3h-2A1.5 1.5 0 0 0 3 4.6C3 13.1 10.9 21 19.4 21a1.5 1.5 0 0 0 1.6-1.5v-2a1.5 1.5 0 0 0-1.2-1.5l-2.7-.5a1.5 1.5 0 0 0-1.5.6l-.8 1.1a13 13 0 0 1-5.6-5.6l1.1-.8a1.5 1.5 0 0 0 .6-1.5l-.5-2.7A1.5 1.5 0 0 0 6.5 3Z"
+    ></path>
+  </svg>
+  <span>{label}</span>
+  <span class="sr-only">{phone}</span>
+</a>

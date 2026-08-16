@@ -1,0 +1,118 @@
+name: Wine Cooler Repair
+shortName: Wine Cooler
+order: 8
+icon: wine-cooler
+
+metaTitle: Wine Cooler Repair — Same-Day Service | FIX IT EASY
+metaDescription: >-
+  Wine fridge drifting warm, fogging inside or cycling loudly? Same-day repair in Florida and
+  Connecticut, priced before any work begins.
+
+intro: >-
+  Wine coolers fail differently from refrigerators because they are built to hold a narrow
+  band of temperature and humidity rather than to get cold quickly. A great many are
+  thermoelectric rather than compressor-driven, which changes the fault list entirely: no
+  sealed system at all, but a Peltier module and a pair of fans wholly dependent on
+  unobstructed airflow. That design has a hard limit — it can only hold a fixed number of
+  degrees below the room it stands in — and a Florida house in August walks straight past it.
+  Built-in units add the constraint that defines this appliance: they vent through a narrow
+  front grille, and the moment a custom panel, a plinth or a stack of boxes covers it, the
+  cabinet cooks its own condenser.
+
+commonProblems:
+  - title: Temperature climbing through the summer
+    body: >-
+      Thermoelectric coolers can only hold a set number of degrees below ambient. Once the
+      room climbs, the cabinet follows and nothing is actually broken. A compressor unit in
+      the same spot would hold. Establishing which type you have decides whether this is a
+      repair, a relocation or a room that needs cooling.
+
+  - title: A built-in unit overheating in its cabinet
+    body: >-
+      Under-counter coolers exhaust through the front grille, and blocking it with trim, a
+      custom panel or stored boxes traps heat against the condenser. The unit then runs
+      continuously and still loses temperature. Clearing the vent path is very often the
+      entire repair.
+
+  - title: Condensation on the glass and inside the cabinet
+    body: >-
+      A door seal that no longer closes evenly, or a failed divider seal on a dual-zone
+      model. Humid air entering a cool cabinet condenses on the first cold surface it meets,
+      which is the glass. Left alone the moisture works its way to the shelf rails and the
+      label edges of the bottles.
+
+  - title: Fan noise carrying through the cabinetry
+    body: >-
+      The condenser and circulation fans in these units are small and run almost constantly.
+      When a bearing dries out, the noise transmits through the surrounding joinery far more
+      than the unit's own volume suggests. It is an inexpensive repair, and on a
+      thermoelectric model an urgent one — that fan is the only thing removing heat.
+
+  - title: One zone holding while the other drifts
+    body: >-
+      On a dual-zone cabinet the usual causes are the divider seal, a failed damper, or a
+      second thermistor reading incorrectly. The symptom looks dramatic and the parts are
+      generally small, which makes this one of the more satisfying faults to put right.
+
+  - title: Interior light staying on and warming the cabinet
+    body: >-
+      A door switch that no longer registers the door closing leaves the display lit and, on
+      units with older lamps, adds a genuine heat load inside a cabinet designed to hold a
+      four-degree band. It presents as a cooling fault and is not one.
+
+whenToCall:
+  - title: Any sealed-system work on a compressor model
+    body: >-
+      Recovering and recharging refrigerant requires EPA Section 608 certification and
+      recovery equipment. Beyond the legal position, a sealed system is pressurised and
+      opening one without the right tools is an injury risk.
+
+  - title: Sliding a built-in unit out of its opening
+    body: >-
+      Under-counter cabinets are heavier than they look, often screwed to the surrounding
+      joinery, and sometimes siliconed to the counter. Levering one out damages the cabinet
+      face and the flooring, and a full rack of bottles makes it considerably heavier than it
+      appears.
+
+  - title: A glass door that has cracked or lost its seal to the frame
+    body: >-
+      The door is a sealed double-glazed unit with UV coating. A crack or a separated frame
+      cannot be repaired in place, and running the cooler with one lets humidity straight into
+      the cabinet — which does more harm to the contents than the temperature drift does.
+
+repairOrReplace: >-
+  Fans, thermistors, door switches, seals, dampers and control boards are all modest parts,
+  and on a built-in unit they are worth fitting for a long time, because replacing an
+  under-counter cooler means matching a cabinet opening and paying for installation before you
+  have even bought the appliance. The judgement calls are two. A failed Peltier module on a
+  small freestanding thermoelectric unit generally costs more than the cooler is worth. And a
+  sealed-system fault on a compressor model past eight to ten years old passes half the price
+  of a replacement, at which point we say so. The awkward case is a cooler that has never
+  performed well from new: that is usually the installation or the room rather than the
+  machine, and no repair will settle it.
+
+faq:
+  - question: What temperature should a wine cooler hold?
+    answer: >-
+      Broadly 45°F to 55°F for whites and 55°F to 65°F for reds, which is why dual-zone units
+      exist. What matters more than the exact number is stability — repeated swings do more
+      harm to a bottle than sitting a few degrees off a target.
+
+  - question: My cooler runs constantly. Is that a fault?
+    answer: >-
+      On a thermoelectric unit, near-constant running is normal by design. On a compressor
+      unit it is not, and points at a door seal, a blocked condenser or a low charge. The
+      first thing a technician will establish is which type you have.
+
+  - question: Can a wine cooler be repaired in place under the counter?
+    answer: >-
+      Ventilation and seal work usually can be. Anything reaching the compressor, the module
+      or the back of the cabinet means sliding the unit out, and built-in installations are
+      often tighter than they look. We check that before quoting rather than halfway through.
+
+  - question: Is a garage or a lanai a reasonable place for one?
+    answer: >-
+      Rarely. Both swing well outside the ambient range these units are designed for — too hot
+      through a Florida summer, too cold through a Connecticut winter — and a thermoelectric
+      model has no chance in either. If the cabinet has to live outside the conditioned part
+      of the house, it needs to be a compressor unit rated for it.

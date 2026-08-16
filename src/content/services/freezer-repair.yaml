@@ -1,0 +1,118 @@
+name: Freezer Repair
+shortName: Freezer
+order: 2
+icon: freezer
+
+metaTitle: Freezer Repair — Same-Day Service | FIX IT EASY
+metaDescription: >-
+  Chest or upright freezer thawing, frosting over or running warm? Same-day repair in Florida
+  and Connecticut, priced before any work begins.
+
+intro: >-
+  A freezer fails quietly. Nothing sounds different, the light still comes on, and the
+  problem only announces itself when something in the middle of the load has gone soft — by
+  which point the unit has usually been drifting for days. Geography decides which way it
+  drifts. Connecticut freezers spend the winter in unheated garages, mudrooms and back
+  porches, where the thermostat reads the room instead of the load and simply stops calling
+  for cooling. Florida freezers sit in laundry rooms and lanais at eighty-five degrees with
+  humidity that turns every door opening into a frost deposit on the walls. The four faults
+  behind almost every call — a tired door seal, a defrost system that stopped cycling, a
+  smothered condenser and a thermostat reading the wrong air — are all repairable, and all of
+  them get worse the longer the unit is left running.
+
+commonProblems:
+  - title: Heavy frost forming on the walls and over the load
+    body: >-
+      Frost on the contents rather than on the coil is moisture getting in, not cooling going
+      out. Warm air is passing a hardened or torn door gasket, or the lid is no longer sitting
+      square on its hinge. A seal can hold perfectly along the top and fail along the bottom
+      where nobody looks, so it is tested around the whole perimeter rather than by eye.
+
+  - title: Stops holding temperature once the garage gets cold
+    body: >-
+      A standard freezer expects to live in a room above roughly 55°F. When the surrounding
+      air falls below that, the control stops running because it is reading ambient rather
+      than compartment temperature, and the load thaws while the machine reports itself
+      content. Nothing has broken and no part will change it — the fix is a garage-ready kit
+      where the manufacturer offers one, or a warmer location.
+
+  - title: Running non-stop and never cycling off
+    body: >-
+      Start at the condenser, which on a chest model runs along the back or underneath. Packed
+      with dust and pet hair it can no longer shed heat, so the unit never reaches its
+      setpoint and never stops. If the coil is clean, the next candidates are the condenser
+      fan and a low charge, both of which are measured rather than assumed.
+
+  - title: Water on the floor around a chest freezer
+    body: >-
+      Either the drain plug has worked loose, or the cabinet is losing temperature and the
+      frost built up on the walls is melting. The first takes two minutes; the second is
+      urgent and means everything inside is already at risk. A technician can tell which
+      within minutes of lifting the lid.
+
+  - title: Warm spots in an otherwise cold cabinet
+    body: >-
+      Air has to circulate for a freezer to hold an even temperature. Packing the load against
+      the evaporator vents or right up to the lid seal produces pockets that sit several
+      degrees warm, which looks exactly like a failing unit and is not one.
+
+  - title: The lid or door will not stay shut
+    body: >-
+      Chest lids rely on counterbalance hinges that weaken with age, and upright doors on
+      cabinets that have settled. A lid that eases itself open a quarter of an inch overnight
+      will thaw a full load without ever looking open, and it is one of the cheapest faults on
+      this list to correct.
+
+whenToCall:
+  - title: Any work on the sealed refrigerant circuit
+    body: >-
+      Recovering and recharging refrigerant is federally regulated and needs EPA Section 608
+      certification along with recovery equipment. A sealed system is also pressurised, so
+      opening one without the right tools is a genuine injury risk, not just a legal one.
+
+  - title: A unit that trips its breaker or smells hot
+    body: >-
+      Unplug it and stop using it. A freezer drawing enough current to trip a breaker has
+      either a failing compressor winding or a wiring fault, and repeatedly resetting the
+      breaker is how a laundry-room fault becomes a fire.
+
+  - title: Moving a full chest freezer to get behind it
+    body: >-
+      A loaded chest freezer weighs several hundred pounds and the load shifts as it tilts.
+      Dragging one across a finished floor damages the floor, the levelling feet and often the
+      compressor mounts. Let it be emptied and moved properly.
+
+repairOrReplace: >-
+  Freezers are among the more repair-worthy appliances in the house, because the parts that
+  fail most often are cheap and the cabinet itself lasts decades. Gaskets, hinges, thermostats,
+  defrost components, fans and drain plugs are worth replacing at practically any age. The
+  line to watch is the sealed system: a compressor or a refrigerant leak on a unit past ten to
+  twelve years old usually costs more than half the price of a new one, and modern
+  replacements draw meaningfully less power, so replacement wins on both counts. The one
+  scenario where we consistently advise against a repair is a small, inexpensive chest unit
+  with a sealed-system fault — the labour alone exceeds what the machine is worth.
+
+faq:
+  - question: How long will a full freezer stay frozen if it stops running?
+    answer: >-
+      About 48 hours with the door kept closed, and roughly 24 if it is only half full.
+      Opening it to check resets that clock badly. If you have called and are waiting for a
+      technician, the single most useful thing you can do is leave it shut.
+
+  - question: Is it normal for a freezer to run almost continuously in a Florida summer?
+    answer: >-
+      Longer run times in an eighty-five-degree laundry room are expected. Genuinely
+      continuous running is not, and usually points at a condenser that needs cleaning or a
+      door seal that is letting humid air in faster than the unit can freeze it out.
+
+  - question: Can a freezer be too full to work properly?
+    answer: >-
+      A full freezer holds temperature better than an empty one, but only while air can still
+      move. Blocking the evaporator vents or stacking the load to the lid produces warm
+      pockets that read as a fault when the machine is fine.
+
+  - question: My freezer is fine but the food tastes off. What causes that?
+    answer: >-
+      Usually a seal that has been letting air in slowly, which dries and oxidises the surface
+      of the food long before the temperature reads wrong. It is worth having the gasket
+      checked rather than assuming the load was simply stored too long.

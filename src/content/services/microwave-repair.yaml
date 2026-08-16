@@ -1,0 +1,120 @@
+name: Microwave Repair
+shortName: Microwave
+order: 7
+icon: microwave
+
+metaTitle: Microwave Repair — Same-Day Service | FIX IT EASY
+metaDescription: >-
+  Over-the-range or built-in microwave running but not heating? Same-day repair in Florida and
+  Connecticut, at a fixed price agreed up front.
+
+intro: >-
+  A microwave that lights up, turns the plate and leaves the food cold has lost its
+  high-voltage side — the magnetron, the diode, the capacitor or the transformer. That circuit
+  stores a lethal charge with the unit unplugged, which is why this is the one appliance on
+  this site we ask people not to open at all, however simple the part looks. Over-the-range
+  models carry a second job that fails far more often than the cooking half: the vent hood.
+  In a Florida kitchen that hood is fighting humidity as well as grease, and in an older
+  Connecticut house it is often ducted through a long run to a wall cap nobody has opened in
+  twenty years. Built-in and over-the-range units are also the case where a repair almost
+  always beats replacement, because the replacement has to match a cabinet opening and a trim
+  kit before it can even be fitted.
+
+commonProblems:
+  - title: Runs normally but the food stays cold
+    body: >-
+      The high-voltage circuit has failed. The diode is the cheapest and most common culprit,
+      the magnetron the most expensive. A technician discharges the capacitor and tests the
+      circuit in order, which is the difference between a diagnosis and a sequence of part
+      swaps. On an older countertop unit we will tell you plainly when it is not worth it.
+
+  - title: Loud buzzing or humming as soon as it starts
+    body: >-
+      A failing high-voltage transformer, or a diode breaking down under load. The noise
+      usually appears weeks before the unit stops heating altogether, so it is a useful early
+      warning rather than something to wait out.
+
+  - title: Vent fan no longer clearing the cooktop
+    body: >-
+      Grease filters that have never been washed, a damper stuck shut at the wall or roof cap,
+      or a fan motor that has seized. On units with a long duct run, the damper is the piece
+      nobody knows exists until it stops opening.
+
+  - title: Turntable not turning
+    body: >-
+      The drive motor or the coupler underneath, both simple parts. Worth fixing rather than
+      ignoring, because food heated without rotation develops hot and cold zones that make the
+      whole appliance seem weaker than it is.
+
+  - title: Door will not latch, or the unit refuses to run
+    body: >-
+      Microwaves use redundant interlock switches, and if one fails the appliance deliberately
+      refuses to start. That is the safety system working. It should never be bypassed, and a
+      door that has to be pressed or lifted to catch is on its way to exactly this fault.
+
+  - title: Control panel dead or keys responding intermittently
+    body: >-
+      Membrane touch panels sit directly above a cooktop in an over-the-range installation and
+      take years of heat and steam. A panel that responds to some keys and not others has
+      usually failed at the ribbon rather than at the board, which is the cheaper of the two.
+
+whenToCall:
+  - title: Never open the case, even unplugged
+    body: >-
+      The high-voltage capacitor stores enough charge to be fatal long after the unit is
+      disconnected, and it has to be discharged deliberately with the right tool. This is not
+      a caution about voiding a warranty. It is the reason this repair is not a home job under
+      any circumstances.
+
+  - title: Sparking, arcing or a burning smell inside the cavity
+    body: >-
+      Stop and unplug it. Arcing usually means a damaged waveguide cover or a failing
+      magnetron, and continuing to run the unit turns a component failure into a cavity fire.
+
+  - title: Taking down an over-the-range unit
+    body: >-
+      These hang from a wall bracket and a set of cabinet bolts, weigh sixty pounds or more,
+      and come away suddenly once the last bolt is out. Dropping one takes the cooktop below
+      with it. Two people and the right support, every time.
+
+  - title: A damaged or ill-fitting door
+    body: >-
+      The door is part of the shielding, not just a lid. A bent hinge, a cracked panel or a
+      seal that no longer sits flat can let energy escape, and none of that is visible. A
+      damaged door is replaced, not adjusted.
+
+repairOrReplace: >-
+  The answer splits cleanly by where the unit lives. A countertop microwave is inexpensive
+  enough that any high-voltage repair — magnetron, transformer, capacitor — costs more than
+  replacing it, and we will say so rather than take the work. Built-in and over-the-range
+  units are the opposite: a replacement has to match the cabinet opening and often a trim kit,
+  and installation is a job in itself, so repairs stay worthwhile well past ten years. The
+  parts that are always worth fitting, in either case, are door switches, turntable motors,
+  couplers, fan motors and grease filters, because they are cheap and they are what usually
+  fails first.
+
+faq:
+  - question: Is it worth repairing a microwave rather than replacing it?
+    answer: >-
+      For a built-in or over-the-range unit, usually yes — the replacement has to match the
+      opening and the installation is a job of its own. For an inexpensive countertop model
+      with a failed magnetron, usually not, and we will tell you so before charging for
+      anything.
+
+  - question: Can I fix it myself if I unplug it first?
+    answer: >-
+      No. The high-voltage capacitor holds a dangerous charge long after the unit is
+      unplugged, and discharging it safely needs a specific tool and a known procedure. This
+      is the one appliance where we would ask you not to remove the case at all.
+
+  - question: My over-the-range microwave works but the kitchen is smoky. Why?
+    answer: >-
+      Almost certainly the venting rather than the microwave. Start with the grease filters,
+      then the damper at the wall cap. Many of these units are also set to recirculate rather
+      than vent outside, which is a configuration question rather than a fault.
+
+  - question: The turntable turns and the light is on, so why is nothing heating?
+    answer: >-
+      Those are all on the low-voltage side and tell you nothing about the part that actually
+      cooks. A microwave will happily light up, spin and run its timer with the magnetron
+      circuit completely dead, which is why this symptom is so often misread as a minor fault.

@@ -1,0 +1,98 @@
+# DRAFT — written in-house from the reference notes in the project brief.
+# The client must read this through and change reviewStatus to "approved" before launch.
+
+name: New Haven
+state: CT
+stateName: Connecticut
+reviewStatus: draft
+
+metaTitle: Appliance Repair in New Haven, CT | FIX IT EASY
+metaDescription: >-
+  Same-day appliance repair in New Haven, from East Rock to Morris Cove. Old panels, shared
+  basement laundry, tight stairs. Call to check availability.
+
+heroIntro: >-
+  A great deal of New Haven's housing went up before anyone imagined a household running a
+  dishwasher, an induction range and a second refrigerator at the same time. Three-family
+  houses from the turn of the last century still carry sixty to one hundred amp service.
+  Laundry still lives in a shared basement at the end of a duct run that was added decades
+  after the house was built. Staircases were never sized for a modern French-door
+  refrigerator, and neither were the doorways at the top of them. The result is a set of
+  problems that have very little to do with the appliance being poorly made, and a great
+  deal to do with the building it was installed into.
+
+localConditions:
+  - title: Sixty to one hundred amp panels in older houses
+    body: >-
+      A century-old multi-family with its original service simply does not have the
+      capacity a modern kitchen expects. Breakers that trip whenever the dryer and the oven
+      overlap are not an appliance fault, and replacing a heating element will not change
+      it. We identify that plainly rather than charging for a repair that cannot solve it.
+
+  - title: Shared basement laundry at the end of long duct runs
+    body: >-
+      In a three-family, the laundry usually sits in the basement with a vent run that
+      travels a long way before it reaches daylight, often shared awkwardly between units
+      and rarely cleaned. That run is the reason dryers here take two cycles, and it is
+      also the reason thermal fuses keep blowing after being replaced.
+
+  - title: Narrow stairs and doorways limit what can come out
+    body: >-
+      Victorian and early-twentieth-century houses were built with turns on the staircase
+      and doorways under thirty inches. Removing a wide refrigerator for a rear-panel repair
+      is sometimes not possible at all, which changes how a repair has to be approached. We
+      look at that before quoting so the plan is realistic.
+
+  - title: Cold basements and porches in winter
+    body: >-
+      Second freezers stored on an unheated back porch or in an uninsulated basement corner
+      drift out of their operating range once the temperature outside stays below freezing.
+      The unit stops cycling because it reads the cold room, not the warm contents, and
+      everything inside slowly thaws.
+
+neighborhoods:
+  - East Rock
+  - Westville
+  - Wooster Square
+  - Fair Haven
+  - Morris Cove
+  - Prospect Hill
+  - Edgewood
+  - Dwight
+  - Downtown
+
+nearbyCities:
+  - name: Hamden
+  - name: West Haven
+  - name: East Haven
+  - name: Branford
+  - name: Milford
+
+faq:
+  - question: My breaker trips when the dryer and the oven run together. Is the appliance faulty?
+    answer: >-
+      Usually not. A great many New Haven houses still have sixty to one hundred amp
+      service from an era with far lighter demand, and two heavy loads at once is simply
+      more than the panel can carry. A technician can confirm the appliance is drawing what
+      it should, but the answer in that case is an electrician, and we will tell you so
+      rather than sell you a part.
+
+  - question: Our three-family shares a basement laundry. Will you work on it?
+    answer: >-
+      Yes, and in Fair Haven, Edgewood and the streets around East Rock it is a large share
+      of what we do. The thing worth knowing is that the shared vent run is almost always
+      the underlying cause when a dryer stops drying properly, so we check and clear it as
+      part of the visit rather than replacing a fuse that will fail again in a month.
+
+  - question: My refrigerator will not fit back through the doorway. What now?
+    answer: >-
+      It happens often in older housing with narrow turns on the stairs. Some repairs can be
+      done in place with the unit pulled forward; others genuinely cannot. A technician
+      assesses that first and tells you which situation you are in before any work or any
+      charge is agreed.
+
+  - question: How fast can you get someone out?
+    answer: >-
+      We schedule the nearest available technician and give you an estimated arrival window
+      while you are still on the phone. You will know who is coming and roughly when, rather
+      than being told to wait somewhere between morning and evening.

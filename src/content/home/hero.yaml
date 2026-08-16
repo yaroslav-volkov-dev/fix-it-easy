@@ -1,0 +1,23 @@
+# Block 1 of the homepage. This copy is client-approved — keep the wording.
+#
+# "Average response time: 10-20 minutes" was queried with the client because it can read
+# as time-to-arrival. The client confirmed it means how fast we respond, not how fast a
+# van reaches your door. Keep it in the response-time wording; do not turn it into an
+# arrival promise.
+
+metaTitle: Same-Day Appliance Repair | FIX IT EASY
+metaDescription: >-
+  Local appliance repair technicians available today across Florida and Connecticut.
+  Fixed price before the repair, 90-day parts warranty. Call to check availability.
+
+headline: Local technicians are available in your area today.
+
+benefits:
+  - "Average response time: 10-20 minutes"
+  - No hidden fees
+  - 90-Day Parts Warranty
+  - Fixed price before repair
+
+cta:
+  label: Check Availability in My Area
+  note: One call, no forms, no waiting on email.

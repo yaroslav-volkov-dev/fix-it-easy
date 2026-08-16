@@ -1,0 +1,31 @@
+---
+/**
+ * A full-width page band. Sections alternate between light and navy surfaces so the page
+ * reads as distinct blocks rather than one long scroll.
+ */
+type Props = {
+  tone?: 'light' | 'muted' | 'dark' | 'deep';
+  labelledby?: string;
+  id?: string;
+  class?: string;
+};
+
+const { tone = 'light', labelledby, id, class: className = '' } = Astro.props;
+
+const tones = {
+  light: 'bg-white text-grey-700',
+  muted: 'bg-grey-100 text-grey-700',
+  dark: 'band-dark bg-navy-900 text-grey-200',
+  deep: 'band-dark bg-navy-950 text-grey-200',
+} as const;
+---
+
+<section
+  id={id}
+  aria-labelledby={labelledby}
+  class={`py-band ${tones[tone]} ${className}`}
+>
+  <div class="container-page">
+    <slot />
+  </div>
+</section>

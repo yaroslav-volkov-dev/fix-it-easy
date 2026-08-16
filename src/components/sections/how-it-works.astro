@@ -1,0 +1,36 @@
+---
+/**
+ * Homepage block 3, reused on city and service pages. The numbering is real list
+ * semantics, so a screen reader announces the position and the total.
+ */
+import Band from '@/components/ui/band.astro';
+
+type Props = {
+  heading: string;
+  steps: string[];
+  tone?: 'light' | 'muted';
+};
+
+const { heading, steps, tone = 'muted' } = Astro.props;
+const headingId = 'how-it-works-heading';
+---
+
+<Band tone={tone} labelledby={headingId}>
+  <h2 id={headingId} class="text-h2 font-black text-navy-900">{heading}</h2>
+
+  <ol class="mt-heading-gap grid gap-x-8 gap-y-7 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      steps.map((step, index) => (
+        // The number is a marker, not a heading, so it takes the step's own size and is set
+        // apart by colour and weight. It was on the h3 token, which made a numeral outrank
+        // the sentence it belongs to.
+        <li class="flex gap-4 border-t-2 border-navy-900 pt-4">
+          <span class="text-lead font-black text-red-600 tabular-nums">
+            {String(index + 1).padStart(2, '0')}
+          </span>
+          <span class="text-lead font-semibold text-navy-900">{step}</span>
+        </li>
+      ))
+    }
+  </ol>
+</Band>

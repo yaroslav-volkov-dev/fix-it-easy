@@ -1,0 +1,117 @@
+name: Dishwasher Repair
+shortName: Dishwasher
+order: 5
+icon: dishwasher
+
+metaTitle: Dishwasher Repair — Same-Day Service | FIX IT EASY
+metaDescription: >-
+  Dishwasher not draining, not cleaning or leaking under the counter? Same-day repair in
+  Florida and Connecticut, quoted before work begins.
+
+intro: >-
+  Dishwashers fail in ways that are easy to read wrong. Plates coming out gritty look like a
+  detergent problem and are usually a spray-arm or filter problem. Water standing in the base
+  looks like a dead pump and is often an air gap or a disposal connection nobody has touched
+  since installation. And because the machine is built into a run of cabinets, a leak can
+  track along the cabinet floor for weeks before it reaches a point where anyone notices it —
+  which in a Florida kitchen means swollen particleboard, and in an older Connecticut house
+  means a soaked subfloor above a basement. Water chemistry decides the rest: hard municipal
+  supply in parts of Florida and iron-bearing wells in outer Connecticut both deposit scale in
+  exactly the narrow passages the machine depends on.
+
+commonProblems:
+  - title: Dishes come out gritty or still soiled
+    body: >-
+      Blocked spray-arm jets, a clogged filter assembly, or a wash pump that has lost
+      pressure. Hard water accelerates all three by depositing scale precisely where water has
+      to pass. Cleaning the filter and clearing the arms is often the whole repair; when it is
+      not, we measure the pump output rather than guess at it.
+
+  - title: A full basin of water at the end of the cycle
+    body: >-
+      A small amount in the sump is normal by design; a full basin is not. The usual causes
+      are a blocked drain hose, a check valve stuck open, or — very commonly on a recent
+      installation — a garbage disposal knockout plug that was never removed, so the machine
+      has been draining into a sealed port since the day it was fitted.
+
+  - title: Leaking from under the door or the cabinet base
+    body: >-
+      Door gaskets harden and shrink and the lower seal goes first. Underneath, the more
+      common sources are the wash pump seal and the fittings at the inlet valve. Because water
+      tracks along the cabinet floor before it appears, the source is found from below rather
+      than where the puddle shows.
+
+  - title: Will not start, or stops with a flashing light
+    body: >-
+      Door latch switches, control boards and thermal fuses account for most of these. Modern
+      machines also refuse to start when they detect moisture in the base pan — that is a leak
+      warning rather than an electronic fault, and worth taking seriously instead of resetting.
+
+  - title: White film and scale on glassware
+    body: >-
+      Scale narrows the spray jets, insulates the heating element so it has to run longer, and
+      shortens the life of the seals. In hard-water areas this is the main reason performance
+      falls away years before anything actually fails, and no amount of rinse aid fixes a
+      machine that has already furred up inside.
+
+  - title: Detergent left undissolved in the dispenser
+    body: >-
+      Either the dispenser flap is fouled and not opening, or the water is not reaching
+      temperature, or the arms are not clearing the door and washing the powder out. Three
+      quite different faults with one symptom, which is why the arms are spun by hand and the
+      inlet temperature checked before any part is ordered.
+
+whenToCall:
+  - title: Water anywhere near the electrical connection
+    body: >-
+      A dishwasher sits over its own junction box, and a leak that has reached it is a shock
+      hazard. Switch the circuit off at the breaker before pulling the machine out or mopping
+      underneath it.
+
+  - title: A unit that has to be unfastened from the counter
+    body: >-
+      Integrated and panel-fronted machines are screwed to the countertop or the cabinet
+      sides, often behind trim that has since been tiled or siliconed in. Levering one out
+      without releasing the fixings properly cracks stone counters and splits cabinet
+      face-frames.
+
+  - title: A supply line that is weeping at the valve
+    body: >-
+      The braided supply and the shut-off beneath the sink are usually the oldest plumbing in
+      the kitchen. A weeping compression fitting rarely responds to another quarter turn, and
+      snapping an aged valve while trying is how a small leak becomes a flooded floor.
+
+repairOrReplace: >-
+  Freestanding dishwashers are the appliance where replacement wins soonest. Entry-level
+  machines are inexpensive, so once a repair — a wash pump, a control board, a full door
+  assembly — passes roughly half the price of a new unit on a machine over eight years old,
+  it stops making sense. Filters, spray arms, gaskets, latches, valves and drain hoses stay
+  worth fixing at any age. Integrated and panel-fronted models sit on the other side of the
+  line: replacing one means matching a cabinet opening, reusing or remaking a custom door
+  panel and paying for installation, so repairs remain the better call for considerably longer.
+
+faq:
+  - question: Should I rinse dishes before loading them?
+    answer: >-
+      Scrape, but do not rinse. Modern detergents need some soil to work against, and the
+      turbidity sensor in many machines sets the cycle length from how dirty the water is.
+      Perfectly pre-rinsed dishes can produce a short, weak cycle that cleans worse.
+
+  - question: Our water is very hard. Is that damaging the machine?
+    answer: >-
+      Over time, yes. Scale narrows the jets, coats the element so it runs longer for the same
+      temperature, and shortens seal life. Descaling regularly and setting any built-in water
+      softener correctly extends the machine's working life more than any repair we can carry
+      out.
+
+  - question: Can you repair an integrated dishwasher behind a cabinet panel?
+    answer: >-
+      Yes. The custom panel and the counter fixings come off first, which adds time, and some
+      installations are tiled or trimmed in tightly enough that removal has to be done
+      carefully. We check that before quoting, so the price you approve is the price you pay.
+
+  - question: The machine is clean but the kitchen smells. Where is that coming from?
+    answer: >-
+      Usually the filter housing or a drain hose that has no high loop, letting sink water sit
+      back against the check valve. Both are quick to put right, and neither responds to
+      running another empty cycle with cleaner in it.

@@ -1,0 +1,15 @@
+# Block 2 of the homepage. Client-approved copy.
+#
+# This is a static promise about what happens on the phone call. It is deliberately NOT a
+# calculator and NOT a form — the site has no forms anywhere.
+
+heading: "In less than 30 seconds we'll tell you:"
+
+promises:
+  - if your appliance is worth repairing
+  - how soon a technician can arrive
+  - whether the repair is covered by our warranty
+
+cta:
+  label: Call Now
+  note: No obligation. You decide after you hear the price.

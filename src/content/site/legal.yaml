@@ -1,0 +1,44 @@
+# Footer disclaimers and the two legal pages.
+#
+# The legal pages hold a visible placeholder on purpose. Real privacy and terms text has
+# to come from the client's attorney — nobody should generate it. While the status below
+# is "awaiting-attorney" those two pages stay out of the sitemap and carry a noindex tag.
+
+trademarkDisclaimer: >-
+  All brand names, trademarks and logos mentioned on this site belong to their respective
+  owners and are used for identification purposes only. FIX IT EASY is an independent
+  repair service and is not affiliated with, authorized by, or endorsed by any appliance
+  manufacturer.
+
+copyrightTemplate: © {year} FIX IT EASY. All rights reserved.
+
+serviceAreaSummary: Serving homeowners across Florida and Connecticut.
+
+pages:
+  - slug: privacy-policy
+    title: Privacy Policy
+    metaTitle: Privacy Policy | FIX IT EASY
+    metaDescription: >-
+      Privacy policy for the FIX IT EASY appliance repair website. This page is being
+      prepared and will be published before launch.
+    status: awaiting-attorney
+    placeholderHeading: This page is not ready yet
+    placeholderBody: >-
+      The privacy policy for this site is being prepared by the company's attorney and
+      will be published here before launch. In the meantime, note that this website
+      collects nothing: it has no forms, no accounts, no cookies and no third-party
+      trackers. The only action available on this site is placing a phone call.
+
+  - slug: terms-of-service
+    title: Terms of Service
+    metaTitle: Terms of Service | FIX IT EASY
+    metaDescription: >-
+      Terms of service for the FIX IT EASY appliance repair website. This page is being
+      prepared and will be published before launch.
+    status: awaiting-attorney
+    placeholderHeading: This page is not ready yet
+    placeholderBody: >-
+      The terms of service for this site are being prepared by the company's attorney and
+      will be published here before launch. Nothing on this website constitutes a binding
+      offer. Repair scope, pricing and warranty terms are confirmed on the phone and in
+      writing before any work begins.

@@ -1,0 +1,67 @@
+---
+/**
+ * Neighborhoods we cover and the nearby cities we also serve. Nearby cities that have a
+ * page of their own become links, which is where the city-to-city internal linking comes
+ * from; the rest stay as plain text rather than pointing at a page that does not exist.
+ */
+import Band from '@/components/ui/band.astro';
+
+type NearbyCity = {
+  name: string;
+  slug?: string;
+};
+
+type Props = {
+  heading: string;
+  neighborhoodsLabel: string;
+  nearbyLabel: string;
+  neighborhoods: string[];
+  nearbyCities: NearbyCity[];
+};
+
+const { heading, neighborhoodsLabel, nearbyLabel, neighborhoods, nearbyCities } = Astro.props;
+const headingId = 'areas-served-heading';
+---
+
+<Band tone="muted" labelledby={headingId}>
+  <h2 id={headingId} class="text-h2 font-black text-navy-900">{heading}</h2>
+
+  <div class="mt-heading-gap grid gap-9 md:grid-cols-2">
+    <div>
+      <h3 class="eyebrow text-grey-500">{neighborhoodsLabel}</h3>
+      <ul class="mt-4 flex flex-wrap gap-2">
+        {
+          neighborhoods.map((neighborhood) => (
+            <li class="rounded-pill border border-grey-300 bg-white px-4 py-2 text-small font-semibold text-navy-900">
+              {neighborhood}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="eyebrow text-grey-500">{nearbyLabel}</h3>
+      <ul class="mt-4 flex flex-wrap gap-2">
+        {
+          nearbyCities.map((city) => (
+            <li>
+              {city.slug ? (
+                <a
+                  href={`/locations/${city.slug}/`}
+                  class="inline-block rounded-pill border border-navy-900 bg-white px-4 py-2 text-small font-bold text-navy-900 transition-colors hover:bg-navy-900 hover:text-white"
+                >
+                  {city.name}
+                </a>
+              ) : (
+                <span class="inline-block rounded-pill border border-grey-300 bg-white px-4 py-2 text-small font-semibold text-navy-900">
+                  {city.name}
+                </span>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</Band>

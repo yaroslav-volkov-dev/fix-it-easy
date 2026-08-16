@@ -1,0 +1,211 @@
+@import 'tailwindcss';
+
+/*
+  Brand palette sampled from the client's logo: navy #1c2c4c ("FIX IT", the outer ring,
+  the roof) and red #d0202b ("EASY", the chimney, the ribbon). Navy is the dominant
+  surface; red is reserved for primary calls to action and small accents.
+
+  Measured contrast ratios (WCAG 2.1 relative luminance):
+    #FFFFFF on --color-navy-900  13.9 : 1   body + headings on dark bands
+    #FFFFFF on --color-red-600    5.4 : 1   primary button label
+    #FFFFFF on --color-red-700    7.5 : 1   button hover / active
+    --color-grey-700 on #FFFFFF   9.0 : 1   body copy on light bands
+    --color-red-400 on navy-900   4.6 : 1   the only red allowed as text on a dark band
+    --color-red-600 on navy-900   2.59: 1   NEVER text. A red button sitting on a navy
+                                            band carries a light hairline border so the
+                                            control boundary still clears 3:1 (SC 1.4.11).
+
+  The logo is exempt from all of this — WCAG puts no contrast minimum on a brand mark, and
+  substituting the lighter tint inside it turned the badge pink. So the mark keeps #d0202b
+  everywhere and is placed only on light grounds. See brand-badge.astro.
+*/
+@theme {
+  /*
+    Not pure white. A neutral with no hue at all sits outside the palette and reads slightly
+    cold next to the navy; a whisper of the brand hue (chroma 0.002) is invisible on its own
+    and makes every surface belong to the same family. Overriding the token here retints every
+    bg-white, text-white and border-white at once. White on navy-900 stays at 13.7:1.
+  */
+  --color-white: oklch(99.5% 0.002 258);
+
+  --color-navy-950: #131f36;
+  --color-navy-900: #1c2c4c;
+  --color-navy-800: #24375c;
+  --color-navy-700: #2e446f;
+  --color-navy-600: #3a5384;
+
+  --color-red-600: #d0202b;
+  --color-red-700: #a8161f;
+  /* Brand red is only 2.59:1 on navy, so a lighter tint carries the accent on dark bands. */
+  --color-red-400: #f2666f;
+
+  --color-grey-900: #14181f;
+  --color-grey-700: #3f4a5a;
+  --color-grey-500: #667180;
+  --color-grey-300: #c8d0da;
+  --color-grey-200: #e2e6ec;
+  --color-grey-100: #f2f5f8;
+
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+
+  /* Large, confident scale — the audience is stressed and skimming on a phone. */
+  --text-hero: clamp(2.25rem, 1.35rem + 4.3vw, 4rem);
+  --text-hero--line-height: 1.06;
+  --text-hero--letter-spacing: -0.025em;
+  --text-h2: clamp(1.75rem, 1.25rem + 2.3vw, 2.625rem);
+  --text-h2--line-height: 1.12;
+  --text-h2--letter-spacing: -0.02em;
+  /*
+    The top of the scale was committed (1.5x between hero, h2 and h3) but the bottom was flat:
+    h3 sat 1.09x above lead and lead 1.24x above body, so a card title, an intro sentence and
+    body copy were within a couple of pixels of each other. That is what "the fonts don't agree"
+    actually looked like. h3 now clears lead by 1.33x and body by 1.65x.
+  */
+  --text-h3: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);
+  --text-h3--line-height: 1.22;
+  --text-h3--letter-spacing: -0.015em;
+  --text-lead: clamp(1.125rem, 1.05rem + 0.4vw, 1.3125rem);
+  --text-lead--line-height: 1.55;
+  --text-body: 1.0625rem;
+  --text-body--line-height: 1.65;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.5;
+
+  --container-page: 75rem;
+
+  /* Vertical rhythm between page bands. */
+  --spacing-band: clamp(3rem, 1.9rem + 5.4vw, 5.5rem);
+  --spacing-band-tight: clamp(2.25rem, 1.6rem + 3.2vw, 3.75rem);
+  /*
+    The gap from a section heading to whatever it introduces. One value, used everywhere:
+    this was mt-8, mt-9 and mt-10 in different sections, which read as three different
+    relationships when there is only one.
+  */
+  --spacing-heading-gap: 2.5rem;
+
+  --radius-card: 1rem;
+  --radius-control: 0.625rem;
+  --radius-pill: 9999px;
+}
+
+/*
+  The sticky call bar is fixed to the bottom on small screens. Reserving its height on
+  the body keeps it from covering the footer and keeps layout shift at zero.
+*/
+@layer base {
+  :root {
+    --call-bar-height: 4rem;
+    scroll-behavior: smooth;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    color: var(--color-grey-700);
+    background-color: var(--color-white);
+    padding-bottom: calc(var(--call-bar-height) + env(safe-area-inset-bottom, 0px));
+  }
+
+  /*
+    Light type on a dark ground optically reads a weight lighter than the same type on white,
+    and needs more room between lines to stay comfortable. Every dark band gets the extra.
+  */
+  .band-dark {
+    line-height: 1.72;
+  }
+
+  @media (min-width: 48rem) {
+    body {
+      padding-bottom: 0;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    /* Navy, not near-black: every heading in the site was overriding grey-900 to navy-900. */
+    color: var(--color-navy-900);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* A visible, high-contrast focus ring on every interactive element. */
+  :focus-visible {
+    outline: 3px solid var(--color-red-600);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* On navy bands the red ring would fall below 3:1, so it flips to white. */
+  .band-dark :focus-visible {
+    outline-color: #ffffff;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  max-width: var(--container-page);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  @media (min-width: 48rem) {
+    padding-inline: 2rem;
+  }
+}
+
+/* Prose measure — long paragraphs stay readable instead of stretching to 1200px. */
+@utility measure {
+  max-width: 68ch;
+}
+
+/*
+  The small uppercase label above a group of things — column headings in the footer, the
+  two labels over the neighborhood chips, the state names above the city list.
+
+  It exists because that role was being spelled out by hand each time, and had drifted into
+  two different letter-spacings and two different sizes for what is visibly one style.
+*/
+/*
+  The dark hero surface: flat navy closed by a solid red edge.
+
+  An earlier version washed two soft radial gradients across it for depth. That is the single
+  most recognisable tell of the look this brand is explicitly not (soft-gradient SaaS), and it
+  was decoration rather than structure. A hard red rule does the same job the opposite way:
+  it commits to the brand colour instead of diffusing it, it ends the band decisively rather
+  than letting it fade, and it is the same edge the social card carries.
+*/
+@utility surface-hero {
+  background-color: var(--color-navy-900);
+  border-bottom: 0.375rem solid var(--color-red-600);
+}
+
+@utility eyebrow {
+  font-size: 0.8125rem;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}

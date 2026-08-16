@@ -1,0 +1,47 @@
+---
+/**
+ * Homepage block 2. A static promise about the phone call — not a calculator, not a form.
+ */
+import Band from '@/components/ui/band.astro';
+import CallButton from '@/components/ui/call-button.astro';
+
+type Props = {
+  heading: string;
+  promises: string[];
+  ctaLabel: string;
+  ctaNote?: string;
+  phone: string;
+};
+
+const { heading, promises, ctaLabel, ctaNote, phone } = Astro.props;
+const headingId = 'pre-estimate-heading';
+---
+
+<Band tone="light" labelledby={headingId}>
+  <h2 id={headingId} class="measure text-h2 font-black text-navy-900">{heading}</h2>
+
+  <!--
+    Filled cards rather than white panels divided by hairlines. The hairline version was
+    invisible against the white band, so the only thing the eye picked up was that the first
+    promise started a card's padding to the right of the heading above it — the page's left
+    edge appeared to break for no reason. With a surface behind them the inset reads as what
+    it is.
+  -->
+  <ol class="mt-heading-gap grid gap-4 sm:grid-cols-3">
+    {
+      promises.map((promise, index) => (
+        <li class="flex h-full flex-col gap-4 rounded-card bg-grey-100 p-6 sm:p-7">
+          <span class="flex h-11 w-11 items-center justify-center rounded-full bg-red-600 text-lead font-black text-white tabular-nums">
+            {index + 1}
+          </span>
+          <span class="text-lead font-semibold text-navy-900">{promise}</span>
+        </li>
+      ))
+    }
+  </ol>
+
+  <div class="mt-heading-gap">
+    <CallButton phone={phone} label={ctaLabel} size="lg" />
+    {ctaNote && <p class="mt-3.5 text-small text-grey-500">{ctaNote}</p>}
+  </div>
+</Band>

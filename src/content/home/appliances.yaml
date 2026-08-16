@@ -1,0 +1,58 @@
+# Block 6 of the homepage — the client's approved appliance list, in the client's own words
+# and order. This grid is the ONLY way into the service pages from the body of the site.
+#
+# Several labels point at the same page on purpose: one person calls it a range, the next
+# calls it a stove, the third calls it a cook top, and all three should land somewhere that
+# answers them. The label is what the visitor reads; "service" is where the card goes.
+
+heading: Appliances we service
+
+intro: >-
+  Pick what stopped working. Each page covers the failures we run into most often on that
+  appliance, when it is worth calling instead of trying it yourself, and whether the repair
+  is worth the money.
+
+cards:
+  - label: refrigerator
+    icon: refrigerator
+    service: refrigerator-repair
+
+  - label: freezer
+    icon: freezer
+    service: freezer-repair
+
+  - label: dryer
+    icon: dryer
+    service: dryer-repair
+
+  - label: washer
+    icon: washer
+    service: washer-repair
+
+  - label: dishwasher
+    icon: dishwasher
+    service: dishwasher-repair
+
+  - label: oven
+    icon: oven
+    service: oven-stove-range-repair
+
+  - label: stove
+    icon: stove
+    service: oven-stove-range-repair
+
+  - label: range
+    icon: range
+    service: oven-stove-range-repair
+
+  - label: cook top
+    icon: cooktop
+    service: oven-stove-range-repair
+
+  - label: microwave
+    icon: microwave
+    service: microwave-repair
+
+  - label: wine cooler
+    icon: wine-cooler
+    service: wine-cooler-repair

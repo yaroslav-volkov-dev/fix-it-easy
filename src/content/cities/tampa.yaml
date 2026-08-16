@@ -1,0 +1,106 @@
+# DRAFT — written in-house from the reference notes in the project brief.
+# The client must read this through and change reviewStatus to "approved" before launch.
+# A production build refuses to publish a city that is still marked draft.
+
+name: Tampa
+state: FL
+stateName: Florida
+reviewStatus: draft
+
+metaTitle: Appliance Repair in Tampa, FL | FIX IT EASY
+metaDescription: >-
+  Same-day appliance repair across Tampa, from Seminole Heights to New Tampa. Storm-damaged
+  boards, scale, humidity. Call to check technician availability.
+
+heroIntro: >-
+  Tampa sits in the stretch of the country that gets struck by lightning more than anywhere
+  else, and appliance control boards are what pay for it. An afternoon storm rolls in off
+  the bay, the power blinks twice, and a refrigerator that was fine at lunchtime is silent
+  by dinner. Add humidity that never really lets up and Hillsborough County water that
+  leaves scale on everything it passes through, and you get a pattern of failures we see
+  here far more often than in the rest of the country. Most of them are repairable. What
+  matters is knowing which part of the machine the local conditions actually attacked,
+  rather than replacing the expensive component first and finding out afterwards.
+
+localConditions:
+  - title: Storm-season surges take out control boards
+    body: >-
+      The Tampa Bay area records more lightning strikes than any other metro in the United
+      States, and the damage rarely announces itself as a burnt smell. A board takes a
+      spike, keeps working for a week, then drops a single function — the ice maker, the
+      convection fan, one burner. When a fault appears within days of a storm, we test the
+      board rather than chase the symptom.
+
+  - title: Humidity that never drops keeps dryers running long
+    body: >-
+      Air that sits above sixty percent relative humidity year-round means a dryer is
+      pulling damp air through the drum and pushing it into a duct where it condenses. Long
+      cycles get blamed on the heating element when the real problem is that the vent run
+      is wet, lint is sticking to it, and airflow has been falling for months.
+
+  - title: Hard water leaves scale where water has to pass
+    body: >-
+      Much of Hillsborough County is supplied with notably hard water, and it shows up
+      first in the narrowest passages: dishwasher spray jets, ice maker fill valves and
+      washer inlet screens. Performance drops long before anything fails outright, which is
+      why a dishwasher here can seem to stop cleaning properly while testing perfectly.
+
+  - title: Bay-front homes get the coastal corrosion problem too
+    body: >-
+      Bayshore, Davis Islands and the Westshore waterfront are close enough to salt water
+      for it to reach condenser coils and the back panels of refrigerators. It is slower
+      than on the Atlantic side, but on a ten-year-old unit the corrosion is often what
+      finally ends it.
+
+  - title: Downtown and Harbour Island built-ins need planning
+    body: >-
+      High-rise kitchens run built-in refrigerators and integrated dishwashers with cabinet
+      panels and limited clearance, and buildings restrict when a service elevator can be
+      used. We confirm the building's rules when you call so the technician arrives inside
+      the window rather than being turned away at the loading dock.
+
+neighborhoods:
+  - Seminole Heights
+  - Hyde Park
+  - Ybor City
+  - Westshore
+  - Carrollwood
+  - New Tampa
+  - Davis Islands
+  - Palma Ceia
+  - Tampa Palms
+  - Riverside Heights
+
+nearbyCities:
+  - name: St. Petersburg
+  - name: Clearwater
+  - name: Brandon
+  - name: Riverview
+
+faq:
+  - question: My refrigerator failed right after a Tampa thunderstorm. Is that a coincidence?
+    answer: >-
+      Almost certainly not. This region takes more lightning than anywhere else in the
+      country, and a nearby strike puts a surge on the line that damages the control board
+      without leaving any visible mark. If the failure landed within a few days of a storm,
+      tell the technician when you call — it changes where the diagnosis starts.
+
+  - question: Does Tampa water really affect my dishwasher and ice maker?
+    answer: >-
+      Yes. Water hardness across much of Hillsborough County deposits scale in the smallest
+      openings first, so spray jets narrow and fill valves restrict long before anything
+      breaks. If your dishwasher stopped cleaning well without any error code, scale is the
+      first thing worth ruling out.
+
+  - question: How soon can a technician reach my part of Tampa?
+    answer: >-
+      We schedule the nearest available technician and give you an estimated arrival window
+      on the call rather than a vague half-day promise. Travel across the bay and over the
+      bridges at rush hour is real, so the window we give you accounts for it honestly.
+
+  - question: Do you charge more for a high-rise or a built-in appliance?
+    answer: >-
+      The price depends on the work, not on the address. Built-in and high-rise jobs
+      genuinely take longer because the unit has to come out of its cabinet and the building
+      may restrict elevator access, and that time is included in the fixed price you approve
+      before we start. It does not change once work is under way.

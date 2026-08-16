@@ -1,0 +1,26 @@
+---
+/** Homepage block 5, reused at the foot of every service and city page. */
+import CallButton from '@/components/ui/call-button.astro';
+
+type Props = {
+  heading: string;
+  body: string;
+  ctaLabel: string;
+  phone: string;
+};
+
+const { heading, body, ctaLabel, phone } = Astro.props;
+const headingId = 'cta-band-heading';
+---
+
+<section aria-labelledby={headingId} class="band-dark bg-navy-900 py-band-tight text-grey-200">
+  <div
+    class="container-page flex flex-col items-start gap-7 md:flex-row md:items-center md:justify-between md:gap-12"
+  >
+    <div class="measure">
+      <h2 id={headingId} class="text-h2 font-black text-white">{heading}</h2>
+      <p class="mt-3 text-lead">{body}</p>
+    </div>
+    <CallButton phone={phone} label={ctaLabel} variant="onDark" size="lg" class="shrink-0" />
+  </div>
+</section>

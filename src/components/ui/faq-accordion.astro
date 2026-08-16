@@ -1,0 +1,49 @@
+---
+/**
+ * FAQ list built on <details>/<summary>. Native disclosure gives keyboard operation,
+ * screen-reader state and browser find-in-page for free, so this ships zero JavaScript.
+ */
+type FaqEntry = {
+  question: string;
+  answer: string;
+};
+
+type Props = {
+  items: FaqEntry[];
+  class?: string;
+};
+
+const { items, class: className = '' } = Astro.props;
+---
+
+<div class={`divide-y divide-grey-200 border-y border-grey-200 ${className}`}>
+  {
+    items.map((item) => (
+      <details class="group">
+        <summary class="flex cursor-pointer list-none items-start justify-between gap-4 py-6 text-h3 font-bold text-navy-900 transition-colors hover:text-red-600">
+          <span>{item.question}</span>
+          <svg
+            class="mt-1 h-5 w-5 shrink-0 text-red-600 transition-transform duration-200 group-open:rotate-180"
+            viewBox="0 0 20 20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="m4 7 6 6 6-6" />
+          </svg>
+        </summary>
+        <p class="measure pb-6 text-body text-grey-700">{item.answer}</p>
+      </details>
+    ))
+  }
+</div>
+
+<style>
+  /* Safari still paints its own disclosure triangle without this. */
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

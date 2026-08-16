@@ -1,0 +1,42 @@
+# Copy for the pages that list other pages: the service-area index, the human-readable site
+# map and the "page not found" screen.
+#
+# There is no services index page. The appliance grid on the home page is the only entry
+# point into the service pages.
+
+locationsIndex:
+  title: Service Areas
+  metaTitle: Appliance Repair Service Areas | FIX IT EASY
+  metaDescription: >-
+    Same-day appliance repair across Florida and Connecticut. Find your city, see what
+    fails locally and why, then call to check availability today.
+  intro: >-
+    Appliances fail differently depending on where they live. Salt air on the Florida
+    coast, humidity that never lets up, undersized panels in older New England housing.
+    Choose your city below to see what we run into locally and how quickly we can get
+    a technician out to you.
+  stateHeadingTemplate: Appliance repair in {state}
+
+humanSitemap:
+  title: Site Map
+  metaTitle: Site Map | FIX IT EASY
+  metaDescription: >-
+    Every page on the FIX IT EASY website in one list: appliance repair services, service
+    areas across Florida and Connecticut, and site information.
+  intro: >-
+    A plain list of everything on this site. If you are looking for a specific appliance
+    or a specific city, this is the fastest way to find it.
+  sections:
+    main: Main pages
+    services: Appliances we repair
+    locations: Service areas
+    legal: Site information
+
+notFound:
+  title: We could not find that page
+  metaTitle: Page Not Found | FIX IT EASY
+  body: >-
+    The page you were looking for has moved or never existed. Your appliance still needs
+    fixing, though — pick your appliance or your city below, or call and we will take it
+    from there.
+  backLabel: Go to the home page

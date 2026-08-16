@@ -1,0 +1,98 @@
+# DRAFT — written in-house from the reference notes in the project brief.
+# The client must read this through and change reviewStatus to "approved" before launch.
+
+name: Fort Lauderdale
+state: FL
+stateName: Florida
+reviewStatus: draft
+
+metaTitle: Appliance Repair in Fort Lauderdale, FL | FIX IT EASY
+metaDescription: >-
+  Same-day appliance repair in Fort Lauderdale, from Victoria Park to Harbor Beach. Salt-air
+  corrosion, condo built-ins, stacked laundry. Call us today.
+
+heroIntro: >-
+  Two blocks from the Intracoastal, salt does not wait for a storm to do its damage. It
+  settles onto condenser coils, works its way behind a refrigerator, and turns the joints
+  on a control board green over a handful of seasons. A large share of Fort Lauderdale
+  lives close enough to open water for that to be the deciding factor in how long an
+  appliance lasts. A large share also lives in buildings where the laundry is stacked
+  inside a closet and the kitchen appliances are built into cabinetry designed around
+  them, which changes not only what fails but how a technician has to plan the visit
+  before the van even leaves. We schedule around both realities rather than discovering
+  them at the door.
+
+localConditions:
+  - title: Salt air is the deciding factor near the water
+    body: >-
+      On the barrier island, along the Intracoastal and through the finger streets off Las
+      Olas, airborne salt reaches anything with a coil or an exposed circuit. Condensers
+      corrode, refrigerator back panels pit, and solder joints degrade quietly. Rinsing and
+      protecting a condenser adds years to a unit that would otherwise be replaced early.
+
+  - title: Condo buildings decide when the work can happen
+    body: >-
+      Most towers here restrict service elevator use to set hours, require the front desk
+      to be notified, and expect a certificate of insurance on file. None of that is
+      difficult, but it has to be handled before the technician arrives rather than after.
+      We ask about the building when you book so the visit is not wasted.
+
+  - title: Stacked and compact laundry in closets
+    body: >-
+      Apartment laundry is usually a stacked pair or a compact combination unit squeezed
+      into a closet with a folded vent duct behind it. That duct is where lint collects,
+      and it is the reason so many units here dry poorly long before anything actually
+      breaks. Reaching it means unstacking, which is planned work, not a two-minute check.
+
+  - title: Outages and generator switchovers stress electronics
+    body: >-
+      Hurricane season brings not only outages but the voltage sags and surges that come
+      with restoration and with buildings transferring to and from generator power. Modern
+      appliances dislike a brownout considerably more than a clean outage, and a board that
+      survived the storm often fails during the switch back.
+
+neighborhoods:
+  - Victoria Park
+  - Las Olas Isles
+  - Coral Ridge
+  - Rio Vista
+  - Harbor Beach
+  - Sailboat Bend
+  - Colee Hammock
+  - Poinsettia Heights
+  - Croissant Park
+
+nearbyCities:
+  - name: Hollywood
+  - name: Pompano Beach
+  - name: Plantation
+  - name: Sunrise
+  - name: Oakland Park
+
+faq:
+  - question: Why do appliances near the Intracoastal fail sooner?
+    answer: >-
+      Airborne salt reaches every exposed metal surface, and condenser coils are the most
+      vulnerable because air is being pulled across them continuously. Once corrosion
+      insulates a coil, the compressor works harder and runs hotter, which shortens its life
+      well before anything looks broken. Homes in Harbor Beach, Las Olas Isles and Rio Vista
+      see this years earlier than houses a few miles inland.
+
+  - question: My condo requires a certificate of insurance. Can you provide one?
+    answer: >-
+      Tell us the building when you call and we will handle the paperwork the management
+      office needs before the visit. Most towers in Fort Lauderdale ask for it, and sorting
+      it out in advance is the difference between a technician getting upstairs and being
+      turned away at the loading dock.
+
+  - question: Can you service a stacked washer and dryer in a closet?
+    answer: >-
+      Yes. Closet installations take longer because the pair usually has to be unstacked to
+      reach the vent connection and the blower, and there is rarely room to work from the
+      side. That time is in the fixed price you approve before anything starts.
+
+  - question: Do you work on built-in and integrated kitchen appliances?
+    answer: >-
+      Yes, including panel-fronted refrigerators and integrated dishwashers. Those units
+      have to come out of the cabinetry for most repairs, so we allow for it in the quote
+      rather than discovering it halfway through and asking for more.

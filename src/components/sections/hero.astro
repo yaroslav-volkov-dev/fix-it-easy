@@ -1,0 +1,41 @@
+---
+/**
+ * Homepage block 1. The <h1> is the LCP element — it is text, so it paints as soon as the
+ * first bytes land, with no image to wait on and no layout shift when the font swaps in.
+ */
+import CallButton from '@/components/ui/call-button.astro';
+import Checklist from '@/components/ui/checklist.astro';
+
+type Props = {
+  headline: string;
+  benefits: string[];
+  ctaLabel: string;
+  ctaNote?: string;
+  phone: string;
+};
+
+const { headline, benefits, ctaLabel, ctaNote, phone } = Astro.props;
+---
+
+<section class="band-dark surface-hero py-band text-grey-200">
+  <!--
+    Centred rather than top-aligned: the promise panel is a good deal shorter than the
+    headline column, and pinning both to the top left a wedge of empty navy under it.
+  -->
+  <div class="container-page grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center md:gap-14">
+    <div>
+      <h1 class="text-hero font-black text-white">{headline}</h1>
+
+      <div class="mt-9">
+        <CallButton phone={phone} label={ctaLabel} variant="onDark" size="lg" />
+        {ctaNote && <p class="mt-3.5 text-small text-grey-300">{ctaNote}</p>}
+      </div>
+    </div>
+
+    <!-- Solid, not frosted. The blur here was decoration over a flat colour, which is the
+         definition of glass used for its own sake. -->
+    <div class="rounded-card bg-navy-800 p-6 ring-1 ring-white/15 sm:p-8">
+      <Checklist items={benefits} tone="onDark" />
+    </div>
+  </div>
+</section>

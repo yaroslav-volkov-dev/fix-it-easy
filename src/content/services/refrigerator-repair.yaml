@@ -1,0 +1,122 @@
+name: Refrigerator Repair
+shortName: Refrigerator
+order: 1
+icon: refrigerator
+
+metaTitle: Refrigerator Repair — Same-Day Service | FIX IT EASY
+metaDescription: >-
+  Fridge not cooling, leaking or icing over? Same-day refrigerator repair across Florida and
+  Connecticut, at a fixed price agreed before work starts.
+
+intro: >-
+  A refrigerator is the one appliance in the house that cannot wait: once the fresh-food
+  compartment drifts past 40°F, the clock starts on everything inside it. Where we work,
+  two very different climates push the same machine toward failure from opposite directions.
+  In Florida, condensers run against wet, salt-carrying air for eleven months of the year
+  and storm-season surges take out control boards without leaving a mark. In Connecticut,
+  the second refrigerator in an unheated garage spends January below the temperature its
+  thermostat was designed to read, and older kitchens ask a modern unit to share a circuit
+  that was never sized for it. Most of what results is repairable, provided the diagnosis
+  starts at what the environment attacked rather than at the most expensive part.
+
+commonProblems:
+  - title: Runs constantly but the fridge side is warm
+    body: >-
+      This is nearly always airflow rather than the compressor. A frosted-over evaporator
+      coil, caused by a failed defrost heater or defrost thermostat, blocks the air that
+      should be moving into the fresh-food compartment, so the freezer stays cold while the
+      fridge climbs. We check the coil, the heater circuit and the evaporator fan before
+      anything else — a compressor replaced for this reason was never the problem.
+
+  - title: Water pooling under the crisper drawers
+    body: >-
+      A clogged defrost drain. Meltwater that should reach the drip pan backs up into the
+      cabinet, freezes overnight and appears as a sheet of ice beneath the drawers with a
+      puddle on the floor. Clearing the line and fitting a drain clip where the design allows
+      is a short visit, and it prevents the floor and subfloor damage that follows months of
+      being ignored.
+
+  - title: Ice maker producing nothing, or hollow cubes
+    body: >-
+      Three causes account for most of these: a frozen fill tube, a failed water inlet valve,
+      and low pressure from a kinked supply line behind the unit. Undersized or hollow cubes
+      point at fill volume rather than at the ice maker module, which is the single most
+      commonly replaced part that did not need replacing.
+
+  - title: Silent, dark, and warming up
+    body: >-
+      A refrigerator that makes no sound at all has either lost power to the compressor or
+      lost the compressor itself. Start-relay and inverter-board failures are far more common
+      than a dead compressor and cost a fraction of one, so we measure at the relay and the
+      board first and tell you plainly if the sealed system really has gone.
+
+  - title: Compressor and condenser corroded on a coastal home
+    body: >-
+      Salt-laden air reaches the coil at the back or underneath and insulates it. The
+      compressor then works harder, runs hotter and fails years early. Cleaning and
+      protecting the condenser is cheap; discovering the corrosion only when the compressor
+      quits is not.
+
+  - title: Doors no longer sealing, with condensation on the shelves
+    body: >-
+      Gaskets harden and shrink, and a door that has been pulled open by a full shelf of
+      bottles for a decade sits slightly out of square on its hinge. In a humid house, warm
+      air entering past that seal condenses on the first cold surface it meets and drives up
+      run time long before anyone connects the two.
+
+whenToCall:
+  - title: Anything involving the sealed system
+    body: >-
+      The refrigerant circuit is closed, pressurised and legally regulated — recovering and
+      recharging it requires EPA Section 608 certification and equipment no household owns.
+      Topping up a leaking system without finding the leak is both illegal and pointless.
+
+  - title: A burning smell, scorched wiring or a tripping breaker
+    body: >-
+      Stop using the unit and unplug it if you can reach the cord safely. Repeated breaker
+      trips mean either the appliance is drawing a fault current or the circuit is
+      overloaded, and both need measuring rather than resetting.
+
+  - title: A built-in unit that has to come out of its cabinet
+    body: >-
+      Built-ins are heavier than they look, sit on levelling feet under tension, and are
+      often trimmed in tightly. Pulling one out alone risks the flooring, the cabinet and
+      your back — this is a two-person job with the right dolly.
+
+repairOrReplace: >-
+  The honest rule of thumb: if the repair costs more than about half of a comparable new
+  unit, and the refrigerator is past ten years old, replacement usually wins. Below that line
+  it rarely does. Fans, heaters, thermostats, control boards, gaskets and ice makers are
+  worth fixing at almost any age, because they are a small fraction of replacement cost and
+  the rest of the machine is unaffected. A sealed-system leak or a failed compressor on a
+  unit over ten is the case where we will tell you to stop spending. Built-ins are the
+  exception in the other direction: replacing one means matching a cabinet opening and paying
+  for installation, so repairs stay worthwhile considerably longer.
+
+faq:
+  - question: How cold should my refrigerator actually be?
+    answer: >-
+      The fresh-food compartment should sit between 35°F and 38°F and the freezer at 0°F. If
+      the fresh-food side stays above 40°F for more than about four hours, treat the food as
+      unsafe. A thermometer left overnight in a glass of water on the middle shelf reads far
+      more honestly than the display on the door.
+
+  - question: My refrigerator is loud. Is it about to fail?
+    answer: >-
+      Not necessarily. A rattling condenser fan blade, a dry evaporator fan bearing or a drip
+      pan that has shifted all sound alarming and cost little to fix. The noise worth acting
+      on quickly is one that changes with the compressor cycle rather than with the fans.
+
+  - question: Does living near the water really shorten a refrigerator's life?
+    answer: >-
+      Yes, and noticeably. Salt air corrodes the condenser coil, which is the part responsible
+      for shedding heat. Once it is insulated by corrosion the compressor runs hotter for
+      longer, and units within a few blocks of open water routinely fail years before
+      identical ones a short drive inland.
+
+  - question: Can I keep a refrigerator in the garage over a Connecticut winter?
+    answer: >-
+      Only if it is built for it. A standard unit expects an ambient temperature above roughly
+      55°F, and once the garage drops below that the thermostat stops calling for cooling
+      while the contents warm. Some manufacturers offer a garage-ready kit; where they do not,
+      the answer is to move the unit indoors.

@@ -1,0 +1,102 @@
+---
+import CtaBand from '@/components/sections/cta-band.astro';
+import Band from '@/components/ui/band.astro';
+import Breadcrumbs from '@/components/ui/breadcrumbs.astro';
+import BaseLayout from '@/layouts/base-layout.astro';
+import { interpolate } from '@/lib/interpolate';
+import { toE164 } from '@/lib/phone';
+import { buildBreadcrumbs, buildGraph, buildOrganization } from '@/lib/schema';
+import { absoluteUrl, canonicalUrl } from '@/lib/seo';
+import { cityRefs, groupCitiesByState, loadCities, loadHomeCopy, loadSiteCopy } from '@/lib/site';
+
+const { brand, pages } = await loadSiteCopy();
+const home = await loadHomeCopy();
+const cities = await loadCities();
+const groups = groupCitiesByState(cities);
+
+const copy = pages.locationsIndex;
+const canonical = canonicalUrl(Astro.site, Astro.url.pathname);
+const siteUrl = absoluteUrl(Astro.site, '/');
+
+const jsonLd = buildGraph([
+  buildOrganization({
+    siteUrl,
+    name: brand.name,
+    logoUrl: absoluteUrl(Astro.site, '/logo.png'),
+    telephone: toE164(brand.phone),
+    cities: cityRefs(cities),
+  }),
+  buildBreadcrumbs([
+    { name: brand.breadcrumbHomeLabel, url: absoluteUrl(Astro.site, '/') },
+    { name: copy.title, url: canonical },
+  ]),
+]);
+---
+
+<BaseLayout title={copy.metaTitle} description={copy.metaDescription} jsonLd={jsonLd}>
+  <Breadcrumbs
+    items={[{ label: brand.breadcrumbHomeLabel, href: '/' }, { label: copy.title }]}
+    ariaLabel={brand.breadcrumbAriaLabel}
+  />
+
+  <section class="band-dark surface-hero py-band text-grey-200">
+    <div class="container-page">
+      <h1 class="measure text-hero font-black text-white">{copy.title}</h1>
+      <p class="measure mt-6 text-lead">{copy.intro}</p>
+    </div>
+  </section>
+
+  <!--
+    Every state in one band, and each city a full-width row rather than a tile.
+
+    Two states used to mean two full bands, so four links spent two screens and left a third
+    of every row empty. Rows fill the width whatever the count is, and the list keeps working
+    when the fifth and the twentieth city arrive, which a fixed three-column grid does not.
+  -->
+  <Band tone="light">
+    {
+      groups.map((group, index) => (
+        <div class={index > 0 ? 'mt-band-tight' : ''}>
+          <h2 class="text-h2 font-black text-navy-900">
+            {interpolate(copy.stateHeadingTemplate, { state: group.stateName })}
+          </h2>
+
+          <ul class="mt-heading-gap border-t border-grey-300">
+            {group.cities.map((city) => (
+              <li class="border-b border-grey-300">
+                {/* The negative margin lets the hover fill bleed past the text on both sides,
+                    so the row still reads as a band and the type keeps the page's left edge. */}
+                <a
+                  href={`/locations/${city.id}/`}
+                  class="group -mx-4 flex items-baseline justify-between gap-6 px-4 py-5 transition-colors duration-150 hover:bg-navy-900"
+                >
+                  <span class="flex flex-col gap-1">
+                    <span class="text-h3 font-bold text-navy-900 group-hover:text-white">
+                      {city.data.name}, {city.data.state}
+                    </span>
+                    <span class="text-small text-grey-700 group-hover:text-grey-300">
+                      {city.data.localConditions[0]?.title}
+                    </span>
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="shrink-0 text-lead font-black text-red-600 group-hover:text-white"
+                  >
+                    {'→'}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </Band>
+
+  <CtaBand
+    heading={home.ctaBand.heading}
+    body={home.ctaBand.body}
+    ctaLabel={home.ctaBand.cta.label}
+    phone={brand.phone}
+  />
+</BaseLayout>

@@ -1,0 +1,53 @@
+---
+/**
+ * Visible breadcrumb trail. The matching BreadcrumbList JSON-LD is built separately in
+ * lib/schema.ts from the same array, so the two can never drift apart.
+ */
+type Crumb = {
+  label: string;
+  href?: string;
+};
+
+type Props = {
+  items: Crumb[];
+  ariaLabel: string;
+};
+
+const { items, ariaLabel } = Astro.props;
+---
+
+<nav aria-label={ariaLabel} class="border-b border-grey-200 bg-grey-100">
+  <div class="container-page">
+    <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 py-3 text-small text-grey-500">
+      {
+        items.map((item, index) => (
+          <li class="flex items-center gap-2">
+            {index > 0 && (
+              <svg
+                class="h-3.5 w-3.5 text-grey-300"
+                viewBox="0 0 16 16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m6 3 5 5-5 5" />
+              </svg>
+            )}
+            {item.href ? (
+              <a href={item.href} class="underline-offset-2 hover:text-navy-900 hover:underline">
+                {item.label}
+              </a>
+            ) : (
+              <span aria-current="page" class="font-semibold text-navy-900">
+                {item.label}
+              </span>
+            )}
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</nav>

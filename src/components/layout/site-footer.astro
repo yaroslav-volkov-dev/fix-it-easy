@@ -1,0 +1,67 @@
+---
+import PhoneLink from '@/components/ui/phone-link.astro';
+import { interpolate } from '@/lib/interpolate';
+import type { SiteCopy } from '@/lib/site';
+
+type Props = {
+  brand: SiteCopy['brand'];
+  navigation: SiteCopy['navigation'];
+  legal: SiteCopy['legal'];
+};
+
+const { brand, navigation, legal } = Astro.props;
+
+const copyright = interpolate(legal.copyrightTemplate, {
+  year: String(new Date().getFullYear()),
+});
+---
+
+<footer class="band-dark bg-navy-950 text-grey-300">
+  <div class="container-page py-band-tight">
+    <div class="grid gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
+      <div>
+        <!--
+          No badge here. It is drawn for a white ground: on navy the brand red falls to 2.6:1
+          against the surface, and lightening it to compensate turns the mark pink. The name,
+          set in the wordmark's own slanted cut, carries the brand on this dark band instead —
+          the badge itself sits on the homepage, on white.
+        -->
+        <p class="text-3xl font-black tracking-tight text-white">
+          <span class="inline-block -skew-x-6">{brand.name}</span>
+        </p>
+        <p class="eyebrow mt-2 text-grey-300">{brand.wordmark.sub}</p>
+
+        <p class="mt-6 max-w-sm text-body">{legal.serviceAreaSummary}</p>
+        <PhoneLink phone={brand.phone} tone="onDark" class="mt-5 text-2xl" />
+        <p class="mt-1 text-small text-grey-300">{brand.callBarNote}</p>
+      </div>
+
+      <div class="grid gap-8 sm:grid-cols-3">
+        {
+          navigation.footerGroups.map((group) => (
+            <nav aria-label={group.heading}>
+              <h2 class="eyebrow text-white">{group.heading}</h2>
+              <ul class="mt-4 grid gap-2.5">
+                {group.links.map((link) => (
+                  <li>
+                    <a
+                      href={link.href}
+                      class="text-body text-grey-300 underline-offset-4 hover:text-white hover:underline"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="mt-12 border-t border-white/15 pt-8">
+      <p class="measure text-small text-grey-300">{legal.trademarkDisclaimer}</p>
+      <p class="mt-4 text-small text-grey-300">{copyright}</p>
+    </div>
+  </div>
+</footer>

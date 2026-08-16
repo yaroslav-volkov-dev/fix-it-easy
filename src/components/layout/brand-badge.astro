@@ -1,0 +1,145 @@
+---
+/**
+ * The full circular badge, redrawn from the client's logo: navy ring, gabled roof with a red
+ * chimney and a four-pane window, the FIX IT EASY wordmark, APPLIANCE REPAIR between two red
+ * rules, the wrench roundel, and the red banner curving across the foot.
+ *
+ * The words are real SVG text rather than outlines, so they stay sharp at any size, remain
+ * selectable and readable to a screen reader, and keep coming from brand.yaml like every
+ * other string on the site. `textLength` pins each line to the width the mark was drawn
+ * around, so the layout cannot drift if the wording is ever edited.
+ *
+ * Vertical layout, in viewBox units, mirroring the proportions of the original:
+ *   26–72   roof, with the chimney on the right slope and the window inside the gable
+ *   80–108  FIX IT EASY
+ *   116–127 APPLIANCE REPAIR, flanked by the red rules
+ *   130–174 wrench roundel, overlapping the banner as in the original
+ *   168–188 banner band at its lowest point
+ *
+ * If the client supplies the original vector, this whole file is what it replaces.
+ */
+import type { SiteCopy } from '@/lib/site';
+
+type Props = {
+  brand: SiteCopy['brand'];
+  class?: string;
+};
+
+const { brand, class: className = '' } = Astro.props;
+
+/**
+ * The brand colours, never substituted. An earlier cut lightened the red on dark surfaces
+ * because #d0202b clears only 2.6:1 against navy — but WCAG exempts logos from contrast
+ * minimums, and the lighter tint turned the mark pink. The rule that replaces it: the badge
+ * is drawn for a white ground, so it is only ever placed on one.
+ */
+const ink = 'var(--color-navy-900)';
+const accent = 'var(--color-red-600)';
+const knockout = '#ffffff';
+const ribbonInk = '#ffffff';
+
+/**
+ * The banner is two concentric arcs: the wide red band, and a slightly larger one used only
+ * as the text baseline, so the letters sit centred in the band instead of riding its top edge.
+ */
+const BAND_ARC = 'M36 145 A78 78 0 0 0 164 145';
+const TEXT_ARC = 'M31 148 A84 84 0 0 0 169 148';
+
+/** Two badges can share a page, so the text path needs an id of its own. */
+const arcId = `badge-arc-${Astro.self.name ?? ''}${brand.wordmark.ribbon.replace(/\W/g, '')}`;
+---
+
+<svg
+  class={className}
+  viewBox="0 0 200 200"
+  width="200"
+  height="200"
+  role="img"
+  aria-label={brand.logoAlt}
+  font-family="var(--font-inter), system-ui, sans-serif"
+>
+  <defs>
+    <path id={arcId} fill="none" d={TEXT_ARC}></path>
+  </defs>
+
+  <circle cx="100" cy="100" r="95" fill="none" stroke={ink} stroke-width="6"></circle>
+
+  <!-- Chimney first: the roof band overlaps its base, exactly as in the original. -->
+  <rect x="132" y="32" width="12" height="26" fill={accent}></rect>
+
+  <!-- Gabled roof as a filled band with flat eaves, rather than a stroked chevron. -->
+  <path d="M26 72 L100 26 L174 72 L159 72 L100 42 L41 72 Z" fill={ink}></path>
+
+  <g fill={ink}>
+    <rect x="88" y="49" width="10.5" height="10.5"></rect>
+    <rect x="101.5" y="49" width="10.5" height="10.5"></rect>
+    <rect x="88" y="62.5" width="10.5" height="10.5"></rect>
+    <rect x="101.5" y="62.5" width="10.5" height="10.5"></rect>
+  </g>
+
+  <!-- FIX IT EASY. The skew stands in for the italic cut of the original wordmark. -->
+  <g transform="translate(100 108) skewX(-8) translate(-100 -108)">
+    <text
+      x="100"
+      y="108"
+      textLength="166"
+      lengthAdjust="spacingAndGlyphs"
+      text-anchor="middle"
+      font-size="40"
+      font-weight="900"
+      fill={ink}
+    >
+      {brand.wordmark.lead}<tspan fill={accent}>{' '}{brand.wordmark.accent}</tspan>
+    </text>
+  </g>
+
+  <!-- APPLIANCE REPAIR between the two short red rules. -->
+  <g fill={accent}>
+    <rect x="19" y="121" width="15" height="3.5" rx="1.75"></rect>
+    <rect x="166" y="121" width="15" height="3.5" rx="1.75"></rect>
+  </g>
+  <text
+    x="100"
+    y="127"
+    textLength="120"
+    lengthAdjust="spacingAndGlyphs"
+    text-anchor="middle"
+    font-size="14"
+    font-weight="700"
+    fill={ink}>{brand.wordmark.sub}</text
+  >
+
+  <!-- The banner, and the two short arcs that flank the roundel above it. -->
+  <path d={BAND_ARC} fill="none" stroke={accent} stroke-width="25" stroke-linecap="butt"></path>
+  <path
+    d="M44 139 A64 64 0 0 1 70 156"
+    fill="none"
+    stroke={accent}
+    stroke-width="3.5"
+    stroke-linecap="round"></path>
+  <path
+    d="M156 139 A64 64 0 0 0 130 156"
+    fill="none"
+    stroke={accent}
+    stroke-width="3.5"
+    stroke-linecap="round"></path>
+
+  <text font-size="13" font-weight="700" letter-spacing="2" fill={ribbonInk}>
+    <textPath href={`#${arcId}`} startOffset="50%" text-anchor="middle">
+      {brand.wordmark.ribbon}
+    </textPath>
+  </text>
+
+  <!--
+    Open-end wrench, kept at the angle the client's logo uses. Same proportions as the compact
+    cuts: head a little over twice the handle width, handle the longer of the two, and the jaw
+    a wedge knocked out of the top of the ring in the roundel's own colour.
+  -->
+  <circle cx="100" cy="152" r="22" fill={ink}></circle>
+  <g transform="translate(100 152) rotate(-35)">
+    <circle cx="0" cy="-11" r="8" fill={knockout}></circle>
+    <circle cx="0" cy="-11" r="3.6" fill={ink}></circle>
+    <rect x="-3.6" y="-19.5" width="7.2" height="8.5" fill={ink}></rect>
+    <rect x="-3.6" y="-5.7" width="7.2" height="24.7" rx="3.6" fill={knockout}></rect>
+  </g>
+</svg>

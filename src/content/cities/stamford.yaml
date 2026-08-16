@@ -1,0 +1,98 @@
+# DRAFT — written in-house from the reference notes in the project brief.
+# The client must read this through and change reviewStatus to "approved" before launch.
+
+name: Stamford
+state: CT
+stateName: Connecticut
+reviewStatus: draft
+
+metaTitle: Appliance Repair in Stamford, CT | FIX IT EASY
+metaDescription: >-
+  Same-day appliance repair in Stamford, from Shippan to North Stamford. Well water, winter
+  garages, downtown towers. Call to check availability today.
+
+heroIntro: >-
+  Stamford is really two service areas sharing one name. Downtown and Harbor Point are
+  towers full of stacked ventless laundry and compact built-ins, where getting a technician
+  and the right part up to the eleventh floor is half of the job. North of the Merritt it
+  is wooded lots on private wells, where iron and mineral content quietly wear out
+  dishwashers and ice makers over a few winters. The appliances are the same brands in both
+  halves of the city; what wears them out is not remotely the same. A technician who
+  arrives assuming one situation and finds the other will not have the parts on the van,
+  which is why we ask about your side of town when the call comes in.
+
+localConditions:
+  - title: Private wells north of the parkway
+    body: >-
+      Homes in North Stamford and around the reservoirs typically draw from private wells,
+      and that water carries hardness and dissolved iron that municipal supply does not.
+      Ice makers stain and clog, dishwasher jets close up, and washer inlet screens block.
+      A softener or filter set correctly matters more here than any repair we can perform.
+
+  - title: Freezers in unheated garages through the winter
+    body: >-
+      A second freezer or overflow refrigerator in an attached but unheated garage will
+      often stop holding temperature once January arrives. Standard thermostats read the
+      surrounding air, and when the garage sits below roughly fifty-five degrees the unit
+      simply stops calling for cooling. Nothing has broken, and no part will fix it.
+
+  - title: High-rise laundry closets downtown
+    body: >-
+      Harbor Point and the downtown towers run compact and ventless condensing dryers in
+      closets that were sized to the millimetre. Access is the constraint, and buildings
+      here schedule service elevator use tightly, so a visit has to be booked into the
+      window the management office allows.
+
+  - title: Older colonials with limited panel capacity
+    body: >-
+      Much of the housing stock away from the water was wired long before induction
+      cooktops and dual wall ovens, and adding one to an existing panel is not always
+      possible. When an appliance keeps tripping a breaker, the appliance is often not the
+      problem, and we will say so rather than sell a repair that cannot help.
+
+neighborhoods:
+  - Springdale
+  - Glenbrook
+  - Shippan
+  - North Stamford
+  - The Cove
+  - Waterside
+  - Turn of River
+  - Newfield
+  - Belltown
+
+nearbyCities:
+  - name: Norwalk
+  - name: Greenwich
+  - name: Darien
+  - name: New Canaan
+
+faq:
+  - question: We are on a well in North Stamford. Does that change what fails?
+    answer: >-
+      Considerably. Well water in this part of Fairfield County tends to carry hardness and
+      iron, and both go straight to the narrowest openings in an appliance: ice maker fill
+      valves, dishwasher spray jets and washer inlet screens. Repairs hold far longer when
+      the water treatment is corrected at the same time, and a technician will tell you
+      what they are seeing.
+
+  - question: My garage freezer stopped working in January. What happened?
+    answer: >-
+      Most likely nothing broke. A standard freezer is designed to sit in a room above
+      about fifty-five degrees, and an unheated Stamford garage drops well below that. The
+      thermostat reads the cold air around it and stops running, so the contents thaw even
+      though the machine is fine. The fix is a garage-ready kit where the manufacturer
+      offers one, or moving the unit indoors.
+
+  - question: Do you service buildings in Harbor Point and downtown?
+    answer: >-
+      Yes. Those buildings usually restrict service elevator hours and want the front desk
+      notified in advance, so tell us the building when you call and we will book into a
+      window that works rather than sending someone who cannot get upstairs.
+
+  - question: How quickly can someone get to me?
+    answer: >-
+      We schedule the nearest available technician and give you an estimated arrival window
+      on the call. Crossing between the shoreline and the north end of town takes real time,
+      particularly at commuter hours, and the window we give you reflects that rather than
+      pretending otherwise.

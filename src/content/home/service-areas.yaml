@@ -1,0 +1,10 @@
+# Service areas block on the homepage. The city list is built from content/cities —
+# add a city file and it appears here automatically, grouped by state.
+
+heading: Where we work
+
+intro: >-
+  We cover homes across Florida and Connecticut. Find your city to see what fails locally,
+  which neighborhoods we reach, and how soon a technician can be there.
+
+allLocationsLabel: See all service areas

@@ -1,0 +1,67 @@
+---
+/**
+ * Shared shell for the two legal pages. Both hold a visible placeholder until the client's
+ * attorney supplies the real text — nothing here is generated legal wording.
+ *
+ * While the status is "awaiting-attorney" the page is excluded from the sitemap (see
+ * astro.config.mjs) and carries a noindex tag, so a half-finished legal page can never be
+ * the thing a search engine shows for the brand.
+ */
+import Breadcrumbs from '@/components/ui/breadcrumbs.astro';
+import BaseLayout from '@/layouts/base-layout.astro';
+import { toE164 } from '@/lib/phone';
+import { buildBreadcrumbs, buildGraph, buildOrganization } from '@/lib/schema';
+import { absoluteUrl, canonicalUrl } from '@/lib/seo';
+import { cityRefs, loadCities, loadSiteCopy } from '@/lib/site';
+
+type Props = {
+  slug: 'privacy-policy' | 'terms-of-service';
+};
+
+const { slug } = Astro.props;
+const { brand, legal } = await loadSiteCopy();
+const cities = await loadCities();
+
+const page = legal.pages.find((entry) => entry.slug === slug);
+if (!page) {
+  throw new Error(`src/content/site/legal.yaml has no entry with slug "${slug}".`);
+}
+
+const isAwaitingAttorney = page.status === 'awaiting-attorney';
+const canonical = canonicalUrl(Astro.site, Astro.url.pathname);
+
+const jsonLd = buildGraph([
+  buildOrganization({
+    siteUrl: absoluteUrl(Astro.site, '/'),
+    name: brand.name,
+    logoUrl: absoluteUrl(Astro.site, '/logo.png'),
+    telephone: toE164(brand.phone),
+    cities: cityRefs(cities),
+  }),
+  buildBreadcrumbs([
+    { name: brand.breadcrumbHomeLabel, url: absoluteUrl(Astro.site, '/') },
+    { name: page.title, url: canonical },
+  ]),
+]);
+---
+
+<BaseLayout
+  title={page.metaTitle}
+  description={page.metaDescription}
+  jsonLd={jsonLd}
+  noindex={isAwaitingAttorney}
+>
+  <Breadcrumbs
+    items={[{ label: brand.breadcrumbHomeLabel, href: '/' }, { label: page.title }]}
+    ariaLabel={brand.breadcrumbAriaLabel}
+  />
+
+  <div class="container-page py-band">
+    <h1 class="measure text-hero font-black text-navy-900">{page.title}</h1>
+
+    <div class="measure mt-heading-gap border-t-2 border-navy-900 pt-5">
+      <h2 class="text-h3 font-bold text-navy-900">{page.placeholderHeading}</h2>
+      <p class="mt-3 text-body">{page.placeholderBody}</p>
+    </div>
+  </div>
+</BaseLayout>

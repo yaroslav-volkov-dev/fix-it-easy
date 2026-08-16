@@ -1,0 +1,28 @@
+---
+/**
+ * The visible FAQ. The matching FAQPage JSON-LD is built from the same array in the page
+ * that renders this, so the structured data can never describe questions the page does not
+ * actually show.
+ */
+import FaqAccordion from '@/components/ui/faq-accordion.astro';
+import Band from '@/components/ui/band.astro';
+
+type FaqEntry = {
+  question: string;
+  answer: string;
+};
+
+type Props = {
+  heading: string;
+  items: FaqEntry[];
+  tone?: 'light' | 'muted';
+};
+
+const { heading, items, tone = 'light' } = Astro.props;
+const headingId = 'faq-heading';
+---
+
+<Band tone={tone} labelledby={headingId}>
+  <h2 id={headingId} class="text-h2 font-black text-navy-900">{heading}</h2>
+  <FaqAccordion items={items} class="mt-heading-gap" />
+</Band>

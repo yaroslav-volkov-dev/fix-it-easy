@@ -1,0 +1,48 @@
+---
+/**
+ * Always-visible call bar on phones. The body reserves --call-bar-height at the bottom
+ * (see global.css) so this never covers the footer and never shifts the layout.
+ */
+import { toTelHref } from '@/lib/phone';
+import type { SiteCopy } from '@/lib/site';
+
+type Props = {
+  brand: SiteCopy['brand'];
+};
+
+const { brand } = Astro.props;
+---
+
+<!--
+  The top edge is an inset shadow rather than a border: a border would add a pixel to the
+  bar's height, and the body reserves exactly --call-bar-height at the bottom to keep the
+  bar off the footer. Any mismatch there shows up as the bar clipping the last line.
+-->
+<div
+  class="fixed inset-x-0 bottom-0 z-40 bg-navy-900 pb-[env(safe-area-inset-bottom)] shadow-[inset_0_1px_0_rgb(255_255_255/0.18)] md:hidden"
+>
+  <a
+    href={toTelHref(brand.phone)}
+    class="flex min-h-16 items-center justify-center gap-3 px-5 text-white"
+    data-call-cta
+  >
+    <svg
+      class="h-6 w-6 shrink-0 text-red-400"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <path
+        d="M6.5 3h-2A1.5 1.5 0 0 0 3 4.6C3 13.1 10.9 21 19.4 21a1.5 1.5 0 0 0 1.6-1.5v-2a1.5 1.5 0 0 0-1.2-1.5l-2.7-.5a1.5 1.5 0 0 0-1.5.6l-.8 1.1a13 13 0 0 1-5.6-5.6l1.1-.8a1.5 1.5 0 0 0 .6-1.5l-.5-2.7A1.5 1.5 0 0 0 6.5 3Z"
+      ></path>
+    </svg>
+    <span class="flex flex-col leading-tight">
+      <span class="text-lg font-bold">{brand.phone}</span>
+      <span class="text-small text-grey-300">{brand.callBarNote}</span>
+    </span>
+  </a>
+</div>

@@ -1,0 +1,26 @@
+---
+/**
+ * City page hero. The <h1> and the paragraph under it are the LCP content and both come
+ * straight from the city's content file — no shared boilerplate, which is the point.
+ */
+import CallButton from '@/components/ui/call-button.astro';
+
+type Props = {
+  title: string;
+  intro: string;
+  ctaLabel: string;
+  phone: string;
+};
+
+const { title, intro, ctaLabel, phone } = Astro.props;
+---
+
+<section class="band-dark surface-hero py-band text-grey-200">
+  <div class="container-page">
+    <h1 class="measure text-hero font-black text-white">{title}</h1>
+    <p class="measure mt-6 text-lead">{intro}</p>
+    <div class="mt-9">
+      <CallButton phone={phone} label={ctaLabel} variant="onDark" size="lg" />
+    </div>
+  </div>
+</section>

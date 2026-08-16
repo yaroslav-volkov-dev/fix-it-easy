@@ -1,0 +1,73 @@
+---
+/**
+ * Compact list of every city we cover, grouped by state. Built from the cities collection,
+ * so a new city file appears here automatically.
+ */
+import Band from '@/components/ui/band.astro';
+import { groupCitiesByState, type CityEntry } from '@/lib/site';
+
+type Props = {
+  heading: string;
+  /** Optional so a service page can reuse this block with only a heading. */
+  intro?: string;
+  allLocationsLabel?: string;
+  cities: CityEntry[];
+  tone?: 'light' | 'muted';
+};
+
+const { heading, intro, allLocationsLabel, cities, tone = 'muted' } = Astro.props;
+const groups = groupCitiesByState(cities);
+const headingId = 'service-areas-heading';
+---
+
+<Band tone={tone} labelledby={headingId}>
+  <div class="measure">
+    <h2 id={headingId} class="text-h2 font-black text-navy-900">{heading}</h2>
+    {intro && <p class="mt-4 text-lead">{intro}</p>}
+  </div>
+
+  <div class="mt-heading-gap grid gap-8 sm:grid-cols-2">
+    {
+      groups.map((group) => (
+        <div>
+          <h3 class="eyebrow text-grey-500">{group.stateName}</h3>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            {group.cities.map((city) => (
+              <li>
+                <a
+                  href={`/locations/${city.id}/`}
+                  class="inline-block rounded-pill border border-grey-300 bg-white px-4 py-2 font-semibold text-navy-900 transition-colors hover:border-navy-900 hover:bg-navy-900 hover:text-white"
+                >
+                  {city.data.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+
+  {
+    allLocationsLabel && (
+      <a
+        href="/locations/"
+        class="mt-heading-gap inline-flex items-center gap-2 font-bold text-red-600 underline-offset-4 hover:underline"
+      >
+        {allLocationsLabel}
+        <svg
+          class="h-4 w-4"
+          viewBox="0 0 16 16"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M3 8h9m-3.5-3.5L12.5 8 8.5 11.5" />
+        </svg>
+      </a>
+    )
+  }
+</Band>

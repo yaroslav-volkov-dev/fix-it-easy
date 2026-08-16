@@ -1,0 +1,40 @@
+---
+/**
+ * The phone number shown as itself — used in the header and the footer. The visible text
+ * already is the number, so the accessible name needs nothing added.
+ */
+import { toTelHref } from '@/lib/phone';
+
+type Props = {
+  phone: string;
+  tone?: 'onLight' | 'onDark';
+  class?: string;
+};
+
+const { phone, tone = 'onLight', class: className = '' } = Astro.props;
+
+const toneClass =
+  tone === 'onDark' ? 'text-white hover:text-red-400' : 'text-navy-900 hover:text-red-600';
+---
+
+<a
+  href={toTelHref(phone)}
+  class={`inline-flex items-center gap-2 font-bold tracking-tight transition-colors ${toneClass} ${className}`}
+  data-call-cta
+>
+  <svg
+    class="h-5 w-5 shrink-0"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2.2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <path
+      d="M6.5 3h-2A1.5 1.5 0 0 0 3 4.6C3 13.1 10.9 21 19.4 21a1.5 1.5 0 0 0 1.6-1.5v-2a1.5 1.5 0 0 0-1.2-1.5l-2.7-.5a1.5 1.5 0 0 0-1.5.6l-.8 1.1a13 13 0 0 1-5.6-5.6l1.1-.8a1.5 1.5 0 0 0 .6-1.5l-.5-2.7A1.5 1.5 0 0 0 6.5 3Z"
+    ></path>
+  </svg>
+  {phone}
+</a>

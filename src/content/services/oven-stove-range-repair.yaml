@@ -1,0 +1,143 @@
+name: Oven, Stove & Range Repair
+shortName: Oven, Stove & Range
+order: 6
+icon: range
+
+metaTitle: Oven, Stove & Range Repair — Same-Day | FIX IT EASY
+metaDescription: >-
+  Oven off temperature, burner not lighting, cooktop zone dead? Same-day repair in Florida and
+  Connecticut, fixed price agreed before work starts.
+
+intro: >-
+  Ovens, stoves, ranges and built-in cook tops are one page because they are one machine
+  wearing different amounts of cabinetry, and because the fault you have rarely respects the
+  name on the box. A freestanding range is two appliances sharing a control board and a power
+  feed, which is why a single failure can kill the oven while the burners carry on as though
+  nothing happened. A built-in cook top is the same cooking surface with its electronics
+  sealed into a counter cutout where heat has nowhere to go. Older Connecticut housing brings
+  a further constraint that has nothing to do with the appliance: sixty to one hundred amp
+  service panels that were never sized for a modern electric range, so the breaker trips and
+  everyone blames the machine.
+
+commonProblems:
+  - title: Oven dead while the cooktop still works
+    body: >-
+      On an electric range this very often means one leg of the 240-volt supply has been lost
+      — a breaker tripped on a single pole, or a burned connection at the terminal block. The
+      surface elements run on 120 volts and carry on regardless. Checking the supply first
+      avoids replacing an element and a board that were never at fault.
+
+  - title: Bakes unevenly, or runs fifty degrees off the setting
+    body: >-
+      Nothing announces this; baking simply stops working and the recipe gets blamed. The
+      causes are few — a failed bake element, a temperature sensor drifting out of tolerance,
+      or a relay on the board no longer closing cleanly. We measure the actual cavity
+      temperature rather than trusting the display, and check the sensor's resistance against
+      specification.
+
+  - title: Burner clicks but will not light
+    body: >-
+      Nine times out of ten the burner cap is sitting slightly off its seat, or the electrode
+      is wet or fouled after a spill. When it is neither, the spark module or the electrode
+      itself has failed. Continuous clicking after the burner lights points at the same short
+      list, and is worth fixing rather than tolerating — the module runs hot while it sparks.
+
+  - title: An element or zone that only works on full
+    body: >-
+      An infinite switch cycles power to hold a setting, so when its contacts weld it can only
+      deliver maximum output. That is a safety issue as much as an inconvenience, because the
+      burner no longer responds to being turned down. The switch is inexpensive and usually a
+      same-visit repair.
+
+  - title: Door will not unlock after a self-clean cycle
+    body: >-
+      Self-clean runs the cavity hot enough to distort components, and the door lock motor and
+      the thermal fuse are the usual casualties. It is the single most common reason an older
+      oven reaches the end of its life. If yours is locked shut now, do not force it — the
+      latch mechanism breaks easily and turns a small repair into a larger one.
+
+  - title: Induction zone cutting out after a few minutes
+    body: >-
+      The generator board beneath the zone is overheating and shutting down to protect itself.
+      The cause is usually not the board but its cooling fan, choked with dust from the
+      cabinet below or failing at the bearing. Replacing the board without clearing the
+      airflow simply restarts the countdown.
+
+  - title: A slide-in range that rocks or will not sit level
+    body: >-
+      Slide-in and drop-in models rely on their side trim meeting the countertop cutout. If
+      the unit has been moved or the cutout was built out of specification, it rocks, spills
+      run down the sides into the cabinet, and the anti-tip bracket may not be engaged at all.
+      That last point is a genuine safety item, and we check it on every visit.
+
+whenToCall:
+  - title: Anything on the gas side, including a yellow flame
+    body: >-
+      A lazy yellow flame means incomplete combustion from a blocked port or a misadjusted air
+      shutter, and incomplete combustion produces carbon monoxide. Gas valves, orifices and
+      supply connections have to be worked on with the gas isolated and the joints
+      pressure-checked afterwards — never simply tightened and hoped over.
+
+  - title: 240-volt supply faults and burned terminal blocks
+    body: >-
+      A range terminal block carries enough current to melt its own housing when a connection
+      loosens. Scorching at the block, a warm cord, or a breaker that trips on one pole are
+      all reasons to switch the circuit off and stop using the appliance until it has been
+      measured.
+
+  - title: Cracked ceramic or induction glass
+    body: >-
+      A crack is not cosmetic. It lets liquid reach the elements and wiring below and, on an
+      induction unit, breaks the seal over the coils. The surface has to be replaced rather
+      than repaired, and the appliance should not be used in the meantime.
+
+  - title: A missing anti-tip bracket
+    body: >-
+      The bracket is what stops a freestanding range tipping forward when weight goes on an
+      open oven door, and it is routinely left off after a kitchen renovation or a delivery.
+      If yours is missing, treat that as urgent rather than cosmetic.
+
+repairOrReplace: >-
+  This category stays repairable longer than most, because the expensive part of the appliance
+  is the cabinet and the cavity, and those outlast everything bolted to them. Elements,
+  igniters, spark modules, sensors, infinite switches, thermal fuses and door latches are all
+  modest and worth fitting well past ten years. Control boards and touch panels are the real
+  decision point: on a mid-range freestanding unit over ten years old, a board plus labour can
+  approach half the price of a replacement, and that is where we will say so. Built-in wall
+  ovens and cook tops sit the other way round — replacing one means matching a cabinet cutout
+  and paying for installation, so a board is usually still the cheaper path. And a cracked
+  glass surface on a low-cost cook top is almost always the end of it.
+
+faq:
+  - question: What is the difference between a range, a stove and a cook top?
+    answer: >-
+      A range is one freestanding or slide-in unit combining a cooking surface with an oven
+      underneath. A cook top is a surface only, built into a counter with no oven. Stove is
+      the everyday word for the cooking surface itself. All three are covered here — if you
+      are unsure which you have, tell us whether there is an oven door below the burners.
+
+  - question: My oven is out by about 25 degrees. Can that just be adjusted?
+    answer: >-
+      Most ovens have a calibration offset in the settings that covers a modest error. If the
+      drift is larger than that, or if it grows over time, the sensor is failing and an offset
+      only masks it for a while.
+
+  - question: Is the self-clean cycle safe to use?
+    answer: >-
+      It works, but it is hard on the appliance and is the leading cause of blown thermal
+      fuses and failed door locks. If you use it, run it well before you need the oven — not
+      the day before a holiday.
+
+  - question: Why does my breaker trip when the oven and another appliance run together?
+    answer: >-
+      In a lot of older Connecticut housing, the answer is the panel rather than the range.
+      Sixty to one hundred amp service was sized for an era of much lighter demand, and two
+      heavy loads at once exceed it. A technician can confirm the appliance is drawing what it
+      should, but the fix in that case is an electrician, and we will say so rather than sell
+      you a part.
+
+  - question: Why does my induction cook top only work with some pans?
+    answer: >-
+      Induction needs ferrous cookware. If a magnet does not stick firmly to the base, the zone
+      cannot couple to it and will either report an error or not start at all. That is normal
+      behaviour rather than a fault, and worth ruling out before booking a visit.

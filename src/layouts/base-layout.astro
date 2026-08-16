@@ -1,0 +1,92 @@
+---
+import { Font } from 'astro:assets';
+import { PUBLIC_CF_BEACON_TOKEN, SITE_ENV } from 'astro:env/server';
+import SiteFooter from '@/components/layout/site-footer.astro';
+import SiteHeader from '@/components/layout/site-header.astro';
+import SkipLink from '@/components/layout/skip-link.astro';
+import StickyCallBar from '@/components/layout/sticky-call-bar.astro';
+import { canonicalUrl, OG_IMAGE, absoluteUrl } from '@/lib/seo';
+import { loadSiteCopy } from '@/lib/site';
+import '@/styles/global.css';
+
+type Props = {
+  title: string;
+  description: string;
+  /** Serialised JSON-LD graph from lib/schema.ts. */
+  jsonLd: string;
+  /** Set on pages that must never be indexed, such as the legal placeholders. */
+  noindex?: boolean;
+};
+
+const { title, description, jsonLd, noindex = false } = Astro.props;
+
+const { brand, navigation, legal } = await loadSiteCopy();
+
+const canonical = canonicalUrl(Astro.site, Astro.url.pathname);
+const ogImageUrl = absoluteUrl(Astro.site, OG_IMAGE.path);
+
+/**
+ * Only a production build may be indexed. The same SITE_ENV value drives robots.txt and
+ * the _headers file written by scripts/emit-deploy-files.mjs, so all three agree.
+ */
+const isProduction = SITE_ENV === 'production';
+const robotsDirective = isProduction && !noindex ? 'index, follow' : 'noindex, nofollow';
+const openGraphType = 'website';
+const twitterCardType = 'summary_large_image';
+const mainId = 'main';
+
+const beaconToken = isProduction ? PUBLIC_CF_BEACON_TOKEN : undefined;
+const beaconConfig = beaconToken ? JSON.stringify({ token: beaconToken }) : undefined;
+---
+
+<!doctype html>
+<html lang={brand.htmlLang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={robotsDirective} />
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:type" content={openGraphType} />
+    <meta property="og:site_name" content={brand.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content={String(OG_IMAGE.width)} />
+    <meta property="og:image:height" content={String(OG_IMAGE.height)} />
+    <meta property="og:image:alt" content={brand.logoAlt} />
+    <meta name="twitter:card" content={twitterCardType} />
+
+    <Font cssVariable="--font-inter" preload />
+
+    <script type="application/ld+json" set:html={jsonLd} is:inline />
+
+    {
+      beaconConfig && (
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon={beaconConfig}
+          is:inline
+        />
+      )
+    }
+  </head>
+
+  <body>
+    <SkipLink label={brand.skipLinkLabel} targetId={mainId} />
+    <SiteHeader brand={brand} navigation={navigation} />
+
+    <main id={mainId}>
+      <slot />
+    </main>
+
+    <SiteFooter brand={brand} navigation={navigation} legal={legal} />
+    <StickyCallBar brand={brand} />
+  </body>
+</html>

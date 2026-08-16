@@ -1,0 +1,123 @@
+name: Washing Machine Repair
+shortName: Washer
+order: 4
+icon: washer
+
+metaTitle: Washing Machine Repair — Same-Day | FIX IT EASY
+metaDescription: >-
+  Washer leaking, not draining or stuck mid-cycle with the door locked? Same-day repair in
+  Florida and Connecticut at a price agreed up front.
+
+intro: >-
+  A washer rarely fails discreetly: either there is water somewhere it should not be, or the
+  machine has stopped with a full drum and a door that will not open. Three families of fault
+  account for almost all of it — drainage, seals and control. Where the machine lives changes
+  which one you meet first. On well water in outer Connecticut, hardness and dissolved iron
+  block inlet screens and scale up the heater within a few years. In Florida condo laundry
+  closets, a stacked pair sits on a floor several storeys above someone else's ceiling, which
+  turns a slow boot leak from an annoyance into an insurance claim. And a machine that walks
+  across the floor on spin destroys its own bearings long before anyone treats it as a fault
+  rather than a quirk.
+
+commonProblems:
+  - title: Water left standing in the drum
+    body: >-
+      The drain path is blocked somewhere between the tub and the standpipe. Coins, hair clips
+      and lint collect in the pump filter, and a drain hose pushed too far down a standpipe
+      will siphon and stall the cycle. We clear the whole path rather than the first
+      obstruction, because a partial clear usually means a second call three weeks later.
+
+  - title: Leaking onto the floor during the wash
+    body: >-
+      On a front-loader the usual source is the door boot, split at the lower front where
+      debris collects, or the drain pump housing. On a top-loader it is more often the tub
+      seal or a perished hose. Where the water shows on the floor is a poor guide to where it
+      started, so the machine is run and the path traced rather than guessed.
+
+  - title: Walking across the floor on the spin cycle
+    body: >-
+      Worn suspension rods or shock absorbers let the drum swing far past its intended travel,
+      and a machine that is not level makes it worse. Left alone, that movement wrecks the
+      bearings and the outer tub — a much larger repair. Replacing the rods and levelling the
+      machine is the cheap end of this problem and it is time-sensitive.
+
+  - title: Door locked with the laundry inside
+    body: >-
+      Front-loaders keep the door shut until the drum is empty and stationary, so a drainage
+      fault or a failed lock assembly traps the load. There is a manual release on most
+      machines and a technician can open it without damage, then deal with whatever caused it.
+
+  - title: Scale and iron staining on well water
+    body: >-
+      Hard or iron-bearing water narrows the inlet screens, coats the heater and leaves rust
+      marks on the drum and on light-coloured laundry. The machine tests perfectly while
+      performing badly. Correcting the water treatment matters more here than any part we can
+      fit.
+
+  - title: Persistent smell that returns within a week of cleaning
+    body: >-
+      Residue builds in the boot folds, the detergent drawer and the pump filter, and
+      low-temperature washes never clear it. A hot maintenance cycle helps for a while; if the
+      smell comes back quickly, the filter and boot need physically cleaning out, which is
+      part of a normal service visit.
+
+  - title: Stops at the same point in every cycle
+    body: >-
+      A consistent stopping point is useful information — it usually means the machine is
+      waiting for a condition it never reaches, most often a drain level or a water
+      temperature. Noting the exact point when you call shortens the diagnosis considerably.
+
+whenToCall:
+  - title: Water reaching an electrical connection
+    body: >-
+      A leak that has run under the machine towards the outlet, or standing water around a
+      pump or motor, is a shock risk. Switch the circuit off at the breaker before mopping
+      anything up, and do not run the machine again to see whether it repeats.
+
+  - title: Any leak in an upstairs or condo installation
+    body: >-
+      Above the ground floor, the cost of a leak is measured in someone else's ceiling rather
+      than in your own floor. Shut the supply valves and stop using the machine — a slow boot
+      seal can soak a subfloor for weeks before it shows below.
+
+  - title: Splitting the tub to reach failed bearings
+    body: >-
+      A front-loader with failed bearings has to be largely dismantled, and the outer tub on
+      many models is a sealed assembly. It is heavy, awkward, and easy to reassemble in a way
+      that leaks. This is the point at which a repair stops being a home job.
+
+repairOrReplace: >-
+  Pumps, valves, door locks, control boards, hoses, boots and suspension rods are all
+  inexpensive relative to a new machine, and worth fixing well past ten years of age. The
+  decision point is bearings. On a front-loader that repair means splitting the tub, and on
+  many current models the outer tub is sold only as a sealed assembly, which pushes the total
+  past half the price of a replacement — at that stage, on a machine over eight years old, we
+  will tell you to replace it. Top-loaders age more gracefully and stay economic longer. One
+  thing worth knowing before you decide: if the machine has been walking on spin for months,
+  assume the bearings have already paid for it.
+
+faq:
+  - question: Is a front-loader more expensive to repair than a top-loader?
+    answer: >-
+      Not for the common faults — pumps, valves, boards and door locks cost broadly the same.
+      The difference appears with bearing failures, where a front-loader has to be split open
+      and a top-loader usually does not. We tell you which side of that line you are on before
+      you decide anything.
+
+  - question: We are on a private well. Does that change what goes wrong?
+    answer: >-
+      Considerably. Hardness and iron go straight to the narrowest openings — inlet screens,
+      valves and the heater — so performance falls off years before anything actually breaks.
+      Repairs hold far longer when the water treatment is corrected at the same time.
+
+  - question: My washer is in a second-floor closet. Is that a problem for a repair?
+    answer: >-
+      Not a problem, but it changes the plan. Closet and stacked installations have to be
+      partially dismantled to reach the pump and the rear connections, and there is rarely
+      room to work from the side. That time is included in the quote before anything starts.
+
+  - question: Should I use less detergent than the box says?
+    answer: >-
+      In a high-efficiency machine, usually yes. Excess detergent does not rinse out, and the
+      residue is what feeds the smell and gums up the pressure sensing that tells the machine
+      how full it is. Most over-sudsing complaints resolve on dose alone.
